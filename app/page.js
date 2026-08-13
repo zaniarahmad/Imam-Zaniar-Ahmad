@@ -64,7 +64,7 @@ export default function Home() {
             >
               Book a Nikah
             </Link>
-            <Link className="button button--outline-light" href="/lectures">
+            <Link className="button button--gold" href="/lectures">
               Explore Lectures &amp; Fundraising
             </Link>
           </div>
