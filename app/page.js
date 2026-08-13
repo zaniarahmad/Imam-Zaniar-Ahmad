@@ -245,6 +245,9 @@ export default function Home() {
             <Link className="button button--primary" href="/nikah#guide-preview">
               Read the Free Nikah Guide
             </Link>
+            <Link className="text-link" href="/blog/prepare-for-a-nikah-in-ontario">
+              Prepare for your Nikkah in Ontario <span aria-hidden="true">&rarr;</span>
+            </Link>
             <Link className="text-link" href="/nikah">
               Explore Nikah Services <span aria-hidden="true">&rarr;</span>
             </Link>

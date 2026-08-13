@@ -318,12 +318,17 @@ export default function NikahPage() {
             <span className="eyebrow">Booking Process</span>
             <h2>From Request to Ceremony</h2>
           </div>
-          <Link
-            className="button button--primary"
-            href="/contact"
-          >
-            Check Your Date
-          </Link>
+          <div className="content-actions">
+            <Link
+              className="button button--primary"
+              href="/contact"
+            >
+              Check Your Date
+            </Link>
+            <Link className="text-link" href="/blog/prepare-for-a-nikah-in-ontario">
+              Nikkah preparation checklist for Ontario couples <span aria-hidden="true">&rarr;</span>
+            </Link>
+          </div>
         </div>
         <ol className="visual-steps">
           <li><span><Icon name="message" /></span><div><strong>Send the Request</strong><p>Share the date, city, and service you need.</p></div></li>

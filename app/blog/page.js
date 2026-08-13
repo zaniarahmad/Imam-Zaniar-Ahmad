@@ -53,7 +53,10 @@ export default function BlogIndexPage() {
                 <h3>{post.title}</h3>
                 <p>{post.excerpt}</p>
                 <Link className="text-link" href={`/blog/${post.slug}`}>
-                  Read Article <span aria-hidden="true">&rarr;</span>
+                  {index === 0
+                    ? 'Read the Ontario Nikkah preparation guide'
+                    : 'Read how to invite Imam Zaniar to speak'}{' '}
+                  <span aria-hidden="true">&rarr;</span>
                 </Link>
               </div>
             </article>

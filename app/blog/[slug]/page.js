@@ -40,9 +40,41 @@ export default function BlogArticlePage({ params }) {
   const articleImage = isNikahArticle
     ? siteContent.photos.signingNikah
     : siteContent.photos.communityEvent;
+  const articleUrl = `${siteContent.siteUrl}/blog/${post.slug}`;
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    url: articleUrl,
+    datePublished: post.date,
+    dateModified: post.updated || post.date,
+    image: `${siteContent.siteUrl}${articleImage}`,
+    author: {
+      '@type': 'Person',
+      name: siteContent.name,
+      url: siteContent.siteUrl,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: siteContent.name,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteContent.siteUrl}/icon-512.png`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': articleUrl,
+    },
+  };
 
   return (
     <div className="page-shell">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <section className="page-hero page-hero--with-media article-hero">
         <div className="page-hero__copy">
           <span className="eyebrow">Blog Post</span>
@@ -80,6 +112,10 @@ export default function BlogArticlePage({ params }) {
           <p>{isNikahArticle ? 'Use the complimentary Ontario Nikkah Guide alongside this article.' : 'Share your audience, date, venue, and topic to request a speaking engagement.'}</p>
           <Link className="button button--primary" href={isNikahArticle ? '/nikah#guide' : '/lectures'}>
             {isNikahArticle ? 'Explore the Free Guide' : 'Explore Lectures and Fundraising'}
+          </Link>
+          <Link className="text-link" href="/contact">
+            {isNikahArticle ? 'Book Imam Zaniar for your Nikah' : 'Call or text to book a lecture or fundraising event'}{' '}
+            <span aria-hidden="true">&rarr;</span>
           </Link>
         </aside>
       </section>

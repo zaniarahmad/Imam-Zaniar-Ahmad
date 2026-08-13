@@ -374,6 +374,9 @@ export default function LecturesPage() {
             <a className="button button--outline-light" href={siteContent.contact.smsHref}>
               Send an SMS Text
             </a>
+            <Link className="text-link text-link--light" href="/blog/invite-imam-zaniar-to-speak">
+              How to invite Imam Zaniar Ahmad to speak <span aria-hidden="true">&rarr;</span>
+            </Link>
           </div>
           <p className="phone-channel-note phone-channel-note--light">
             <Icon name="phone" />

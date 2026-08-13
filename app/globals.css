@@ -2253,6 +2253,10 @@ li + li {
   line-height: 1.8;
 }
 
+.text-link--light {
+  color: var(--paper);
+}
+
 .guide-feature {
   display: grid;
   grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
