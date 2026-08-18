@@ -8382,6 +8382,9 @@ body {
   justify-content: center;
   padding-inline: 1rem;
   font-size: 0.78rem;
+  line-height: 1.25;
+  text-align: center;
+  white-space: normal;
 }
 
 .contact-certificate__preview {

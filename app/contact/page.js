@@ -11,7 +11,7 @@ const certificateImage =
 export const metadata = buildMetadata({
   title: 'Contact and Book Imam Zaniar Ahmad',
   description:
-    'Use the Nikah booking form, call or text for Islamic lectures and fundraising, or message Imam Zaniar Ahmad on Instagram with general questions.',
+    'Use the Nikkah booking form, call or text for Islamic lectures and fundraising, or message Imam Zaniar Ahmad on Instagram with general questions.',
   path: '/contact',
 });
 
@@ -23,15 +23,15 @@ export default function ContactPage() {
           <span className="eyebrow">Contact and Booking</span>
           <h1>Choose the Right Way to Reach Imam Zaniar</h1>
           <p className="section-lead">
-            Nikah bookings, lecture and fundraising requests, and general
-            questions each have a dedicated contact method so your message
-            reaches the right place.
+            Nikkah (Katb Kitab) bookings, lecture and fundraising requests,
+            and general questions each have a dedicated contact method so your
+            message reaches the right place.
           </p>
         </div>
         <figure className="page-hero__media page-hero__media--landscape">
           <Image
             src={siteContent.photos.nikahSigningMoment}
-            alt="Imam Zaniar Ahmad guiding a groom through Nikah documents"
+            alt="Imam Zaniar Ahmad guiding a groom through Nikkah documents"
             width={1206}
             height={1491}
             priority
@@ -50,8 +50,9 @@ export default function ContactPage() {
           <p className="card-meta">Nikah and Marriage Officiation</p>
           <h2>Book Through the Nikah Form</h2>
           <p>
-            Use the Google Form for religious Nikah ceremonies, Ontario legal
-            marriage officiation, combined services, and travel requests.
+            Use the Google Form for religious Nikah (Katb Kitab) ceremonies,
+            Ontario legal marriage officiation, combined services, and travel
+            requests.
           </p>
           <div className="response-time-badge">
             <Icon name="clock" />
@@ -106,8 +107,9 @@ export default function ContactPage() {
           <p className="card-meta">General Questions</p>
           <h2>Message on Instagram</h2>
           <p>
-            For general questions that are not Nikah bookings, lectures, or
-            fundraising requests, send Imam Zaniar a message on Instagram.
+            For general questions that are not Nikkah (Katb Kitab) bookings,
+            lectures, or fundraising requests, send Imam Zaniar a message on
+            Instagram.
           </p>
           <a
             className="button button--primary"
@@ -132,9 +134,9 @@ export default function ContactPage() {
           </h2>
           <p>
             A complimentary decorative Islamic marriage certificate printed on
-            sturdy legal-size cardstock, brought to your Nikkah ceremony and
-            filled out on the day so your family has a beautiful keepsake from
-            the occasion.
+            sturdy legal-size cardstock, brought to your Nikah (Katb Kitab)
+            ceremony and filled out on the day so your family has a beautiful
+            keepsake from the occasion.
           </p>
         </div>
         <div className="contact-certificate__visual">
@@ -145,7 +147,7 @@ export default function ContactPage() {
           >
             <Image
               src={certificateImage}
-              alt="Free Nikkah Nama Islamic certificate provided by Imam Zaniar Ahmad for Nikah bookings"
+              alt="Free Nikkah Nama Islamic certificate provided by Imam Zaniar Ahmad for Nikkah bookings"
               width={902}
               height={1490}
               sizes="(max-width: 820px) 34vw, 220px"
@@ -182,7 +184,7 @@ export default function ContactPage() {
           </div>
           <Image
             src={certificateImage}
-            alt="Full preview of the free Nikkah Nama Islamic certificate provided by Imam Zaniar Ahmad"
+            alt="Full preview of the free Nikkah Nama Islamic certificate provided by Imam Zaniar Ahmad for Nikah ceremonies"
             width={902}
             height={1490}
             sizes="92vw"
@@ -201,7 +203,7 @@ export default function ContactPage() {
             <h3>For a Nikah</h3>
             <p>
               Have the date, city, venue, and whether you need a religious
-              ceremony, Ontario legal officiation, or both.
+              Nikkah (Katb Kitab) ceremony, Ontario legal officiation, or both.
             </p>
           </article>
           <article>
@@ -228,8 +230,8 @@ export default function ContactPage() {
         <span className="eyebrow">Learn Before Booking</span>
         <h2>Explore the Services First</h2>
         <p>
-          Review the Nikah and lecture pages if you are still deciding which
-          service or contact method fits your plans.
+          Review the Nikah (Katb Kitab) and lecture pages if you are still
+          deciding which service or contact method fits your plans.
         </p>
         <div className="content-actions content-actions--center">
           <Link className="button button--primary" href="/nikah">
