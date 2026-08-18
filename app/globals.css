@@ -8338,6 +8338,7 @@ body {
   grid-template-columns: minmax(0, 1fr) minmax(170px, 0.34fr);
   align-items: center;
   gap: clamp(1.2rem, 3vw, 2.4rem);
+  margin-top: clamp(1.25rem, 3vw, 2.5rem);
   margin-bottom: clamp(1.5rem, 4vw, 3rem);
   padding: clamp(1.25rem, 3vw, 2rem);
   overflow: hidden;
@@ -8369,12 +8370,21 @@ body {
   line-height: 1.72;
 }
 
-.contact-certificate__copy .button {
-  margin-top: 0.25rem;
+.contact-certificate__visual {
+  justify-self: end;
+  display: grid;
+  justify-items: center;
+  gap: 0.85rem;
+}
+
+.contact-certificate__visual .button {
+  width: 100%;
+  justify-content: center;
+  padding-inline: 1rem;
+  font-size: 0.78rem;
 }
 
 .contact-certificate__preview {
-  justify-self: end;
   display: block;
   padding: 0.5rem;
   border: 1px solid rgba(21, 56, 45, 0.12);
@@ -8399,6 +8409,76 @@ body {
   max-height: 320px;
   object-fit: contain;
   border-radius: 12px;
+}
+
+.certificate-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.certificate-modal:target {
+  display: flex;
+}
+
+.certificate-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(16, 46, 37, 0.82);
+  backdrop-filter: blur(8px);
+}
+
+.certificate-modal__panel {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.85rem;
+  width: min(920px, 96vw);
+  max-height: 94vh;
+  padding: clamp(0.8rem, 2vw, 1.25rem);
+  overflow: auto;
+  border: 1px solid rgba(255, 253, 248, 0.24);
+  border-radius: 24px;
+  background: var(--paper);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.35);
+}
+
+.certificate-modal__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.certificate-modal__top h2 {
+  color: var(--forest);
+  font-size: clamp(1.15rem, 2vw, 1.65rem);
+}
+
+.certificate-modal__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid rgba(21, 56, 45, 0.18);
+  border-radius: 999px;
+  color: var(--forest);
+  font-size: 0.78rem;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.certificate-modal__panel > img {
+  width: auto;
+  max-width: 100%;
+  max-height: 82vh;
+  margin-inline: auto;
+  object-fit: contain;
+  border-radius: 14px;
 }
 
 .contact-route-grid {
@@ -8749,18 +8829,39 @@ body {
   }
 
   .contact-certificate {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) auto;
     padding: 1.25rem;
     border-radius: 24px;
   }
 
-  .contact-certificate__preview {
-    justify-self: start;
+  .contact-certificate__copy {
+    align-self: center;
+  }
+
+  .contact-certificate__copy h2 {
+    font-size: clamp(1.55rem, 8vw, 2.35rem);
+  }
+
+  .contact-certificate__copy p {
+    font-size: 0.84rem;
+    line-height: 1.58;
+  }
+
+  .contact-certificate__visual {
+    align-self: center;
+    width: min-content;
   }
 
   .contact-certificate__preview img {
-    max-width: 150px;
-    max-height: 235px;
+    max-width: min(122px, 30vw);
+    max-height: 195px;
+  }
+
+  .contact-certificate__visual .button {
+    max-width: 122px;
+    padding: 0.62rem 0.65rem;
+    font-size: 0.66rem;
+    line-height: 1.2;
   }
 
   .contact-route > .content-actions {

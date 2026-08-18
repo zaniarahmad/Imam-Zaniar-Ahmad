@@ -41,47 +41,6 @@ export default function ContactPage() {
         </figure>
       </section>
 
-      <section
-        className="contact-certificate"
-        aria-labelledby="free-nikkah-certificate-title"
-      >
-        <div className="contact-certificate__copy">
-          <span className="eyebrow">Included with Nikah Bookings</span>
-          <h2 id="free-nikkah-certificate-title">
-            Free Nikkah Nama Islamic Certificate
-          </h2>
-          <p>
-            A complimentary decorative Islamic marriage certificate printed on
-            sturdy legal-size cardstock, brought to your Nikkah ceremony and
-            filled out on the day so your family has a beautiful keepsake from
-            the occasion.
-          </p>
-          <a
-            className="button button--ghost"
-            href={certificateImage}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Certificate Full Screen
-          </a>
-        </div>
-        <a
-          className="contact-certificate__preview"
-          href={certificateImage}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="View the free Nikkah Nama Islamic certificate full screen"
-        >
-          <Image
-            src={certificateImage}
-            alt="Free Nikkah Nama Islamic certificate provided by Imam Zaniar Ahmad for Nikah bookings"
-            width={902}
-            height={1490}
-            sizes="(max-width: 820px) 46vw, 220px"
-          />
-        </a>
-      </section>
-
       <section className="contact-route-grid" aria-label="Ways to contact Imam Zaniar Ahmad">
         <article className="contact-route contact-route--nikah">
           <div className="contact-route__top">
@@ -160,6 +119,76 @@ export default function ContactPage() {
           </a>
         </article>
       </section>
+
+      <section
+        id="nikkah-certificate"
+        className="contact-certificate"
+        aria-labelledby="free-nikkah-certificate-title"
+      >
+        <div className="contact-certificate__copy">
+          <span className="eyebrow">Included with Nikah Bookings</span>
+          <h2 id="free-nikkah-certificate-title">
+            Free Nikkah Nama Islamic Certificate
+          </h2>
+          <p>
+            A complimentary decorative Islamic marriage certificate printed on
+            sturdy legal-size cardstock, brought to your Nikkah ceremony and
+            filled out on the day so your family has a beautiful keepsake from
+            the occasion.
+          </p>
+        </div>
+        <div className="contact-certificate__visual">
+          <a
+            className="contact-certificate__preview"
+            href="#nikkah-certificate-modal"
+            aria-label="View the free Nikkah Nama Islamic certificate in a full-screen preview"
+          >
+            <Image
+              src={certificateImage}
+              alt="Free Nikkah Nama Islamic certificate provided by Imam Zaniar Ahmad for Nikah bookings"
+              width={902}
+              height={1490}
+              sizes="(max-width: 820px) 34vw, 220px"
+            />
+          </a>
+          <a className="button button--ghost" href="#nikkah-certificate-modal">
+            View Certificate Full Screen
+          </a>
+        </div>
+      </section>
+
+      <aside
+        id="nikkah-certificate-modal"
+        className="certificate-modal"
+        aria-labelledby="certificate-modal-title"
+        role="dialog"
+        aria-modal="true"
+      >
+        <a
+          className="certificate-modal__backdrop"
+          href="#nikkah-certificate"
+          aria-label="Close certificate preview"
+        />
+        <div className="certificate-modal__panel">
+          <div className="certificate-modal__top">
+            <h2 id="certificate-modal-title">Free Nikkah Nama Islamic Certificate</h2>
+            <a
+              className="certificate-modal__close"
+              href="#nikkah-certificate"
+              aria-label="Close certificate preview"
+            >
+              Close
+            </a>
+          </div>
+          <Image
+            src={certificateImage}
+            alt="Full preview of the free Nikkah Nama Islamic certificate provided by Imam Zaniar Ahmad"
+            width={902}
+            height={1490}
+            sizes="92vw"
+          />
+        </div>
+      </aside>
 
       <section className="contact-prep">
         <div className="contact-prep__heading">
