@@ -5,6 +5,9 @@ import Icon from '../components/ui-icon';
 import { buildMetadata } from '../../lib/metadata';
 import { siteContent } from '../../lib/site-content';
 
+const certificateImage =
+  '/images/nikah/free-nikkah-nama-islamic-certificate-imam-zaniar-ahmad.png';
+
 export const metadata = buildMetadata({
   title: 'Contact and Book Imam Zaniar Ahmad',
   description:
@@ -36,6 +39,47 @@ export default function ContactPage() {
           />
           <figcaption>Choose your service below to use the correct booking method.</figcaption>
         </figure>
+      </section>
+
+      <section
+        className="contact-certificate"
+        aria-labelledby="free-nikkah-certificate-title"
+      >
+        <div className="contact-certificate__copy">
+          <span className="eyebrow">Included with Nikah Bookings</span>
+          <h2 id="free-nikkah-certificate-title">
+            Free Nikkah Nama Islamic Certificate
+          </h2>
+          <p>
+            A complimentary decorative Islamic marriage certificate printed on
+            sturdy legal-size cardstock, brought to your Nikkah ceremony and
+            filled out on the day so your family has a beautiful keepsake from
+            the occasion.
+          </p>
+          <a
+            className="button button--ghost"
+            href={certificateImage}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Certificate Full Screen
+          </a>
+        </div>
+        <a
+          className="contact-certificate__preview"
+          href={certificateImage}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View the free Nikkah Nama Islamic certificate full screen"
+        >
+          <Image
+            src={certificateImage}
+            alt="Free Nikkah Nama Islamic certificate provided by Imam Zaniar Ahmad for Nikah bookings"
+            width={902}
+            height={1490}
+            sizes="(max-width: 820px) 46vw, 220px"
+          />
+        </a>
       </section>
 
       <section className="contact-route-grid" aria-label="Ways to contact Imam Zaniar Ahmad">

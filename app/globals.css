@@ -8328,7 +8328,77 @@ body {
 }
 
 .contact-hero {
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+  padding-top: clamp(2.2rem, 4vw, 3.5rem);
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.contact-certificate {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(170px, 0.34fr);
+  align-items: center;
+  gap: clamp(1.2rem, 3vw, 2.4rem);
   margin-bottom: clamp(1.5rem, 4vw, 3rem);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  overflow: hidden;
+  border: 1px solid rgba(197, 161, 90, 0.28);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 100% 0, rgba(197, 161, 90, 0.2), transparent 16rem),
+    linear-gradient(135deg, rgba(255, 253, 248, 0.96), rgba(247, 242, 231, 0.92));
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-certificate__copy {
+  display: grid;
+  justify-items: start;
+  gap: 0.85rem;
+}
+
+.contact-certificate__copy h2 {
+  max-width: 14ch;
+  color: var(--forest);
+  font-size: clamp(2rem, 3.2vw, 3.2rem);
+  line-height: 1;
+}
+
+.contact-certificate__copy p {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: clamp(0.92rem, 1.2vw, 1rem);
+  line-height: 1.72;
+}
+
+.contact-certificate__copy .button {
+  margin-top: 0.25rem;
+}
+
+.contact-certificate__preview {
+  justify-self: end;
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid rgba(21, 56, 45, 0.12);
+  border-radius: 18px;
+  background: var(--paper);
+  box-shadow: 0 18px 40px rgba(21, 56, 45, 0.14);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.contact-certificate__preview:hover,
+.contact-certificate__preview:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 46px rgba(21, 56, 45, 0.18);
+}
+
+.contact-certificate__preview img {
+  display: block;
+  width: auto;
+  max-width: min(220px, 34vw);
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: 12px;
 }
 
 .contact-route-grid {
@@ -8625,6 +8695,15 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .contact-certificate {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .contact-certificate__preview img {
+    max-width: min(150px, 34vw);
+    max-height: 245px;
+  }
+
   .contact-route--general {
     grid-column: auto;
   }
@@ -8667,6 +8746,21 @@ body {
   .contact-route {
     padding: 1.35rem;
     border-radius: 24px;
+  }
+
+  .contact-certificate {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+    border-radius: 24px;
+  }
+
+  .contact-certificate__preview {
+    justify-self: start;
+  }
+
+  .contact-certificate__preview img {
+    max-width: 150px;
+    max-height: 235px;
   }
 
   .contact-route > .content-actions {
