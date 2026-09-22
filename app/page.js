@@ -8,7 +8,7 @@ import { buildMetadata } from '../lib/metadata';
 import { siteContent } from '../lib/site-content';
 
 export const metadata = buildMetadata({
-  title: 'Nikah Imam and Islamic Marriage Officiant in Ontario',
+  title: 'Nikah Imam in Toronto and the GTA',
   description:
     'Book Imam Zaniar Ahmad for a religious Nikah, Ontario legal marriage officiation, or both across Toronto, the GTA, and Southern Ontario.',
   path: '/',
@@ -92,6 +92,8 @@ export default function Home() {
             width={1066}
             height={1600}
             priority
+            fetchPriority="high"
+            quality={68}
             sizes="(max-width: 820px) 88vw, 34vw"
             className="hero-photo"
           />

@@ -64,7 +64,7 @@ const featuredReviews = [
 ];
 
 export const metadata = buildMetadata({
-  title: 'Testimonials, Nikah Experience and Google Reviews',
+  title: 'Nikah Reviews and Testimonials',
   description:
     'Explore 110 Google reviews and community feedback for Imam Zaniar Ahmad, with 300+ Nikkahs and appearances at 1,000+ events since 2017.',
   path: '/testimonials',
@@ -219,6 +219,9 @@ export default function TestimonialsPage() {
           </Link>
           <Link className="button button--quiet" href="/nikah">
             Explore Nikah Services
+          </Link>
+          <Link className="button button--quiet" href="/locations">
+            View Ontario Service Areas
           </Link>
         </div>
       </section>

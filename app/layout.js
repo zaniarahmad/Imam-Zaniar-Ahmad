@@ -62,7 +62,11 @@ export default function RootLayout({ children }) {
         jobTitle: siteContent.title,
         description: siteContent.shortDescription,
         telephone: siteContent.contact.phoneHref.replace('tel:', ''),
-        sameAs: [siteContent.contact.instagram, siteContent.contact.linkedin],
+        sameAs: [
+          siteContent.contact.instagram,
+          siteContent.contact.linkedin,
+          siteContent.reviews.googleBusinessProfileUrl,
+        ],
         areaServed: siteContent.serviceAreas,
         knowsAbout: [
           'Nikah ceremonies',
@@ -88,19 +92,7 @@ export default function RootLayout({ children }) {
         name: siteContent.name,
         description: siteContent.shortDescription,
         publisher: {
-          '@id': `${siteContent.siteUrl}/#organization`,
-        },
-      },
-      {
-        '@type': 'Organization',
-        '@id': `${siteContent.siteUrl}/#organization`,
-        name: siteContent.name,
-        url: siteContent.siteUrl,
-        logo: {
-          '@type': 'ImageObject',
-          url: `${siteContent.siteUrl}/icon-512.png`,
-          width: 512,
-          height: 512,
+          '@id': `${siteContent.siteUrl}/#person`,
         },
       },
     ],
@@ -113,9 +105,9 @@ export default function RootLayout({ children }) {
           <>
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}
-              strategy="afterInteractive"
+              strategy="lazyOnload"
             />
-            <Script id="google-analytics" strategy="afterInteractive">
+            <Script id="google-analytics" strategy="lazyOnload">
               {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
@@ -139,7 +131,6 @@ gtag('config', ${JSON.stringify(ga4Id)}, { anonymize_ip: true });`}
                 width={44}
                 height={44}
                 alt=""
-                priority
               />
               <span className="brand__text">
                 <strong>Imam Zaniar Ahmad</strong>

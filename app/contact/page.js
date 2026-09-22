@@ -117,7 +117,7 @@ export default function ContactPage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon name="instagram" /> Message @zanahmad
+            <Icon name="instagram" /> View Instagram
           </a>
         </article>
       </section>
@@ -239,6 +239,9 @@ export default function ContactPage() {
           </Link>
           <Link className="button button--quiet" href="/lectures">
             Explore Lectures and Fundraising
+          </Link>
+          <Link className="button button--quiet" href="/locations">
+            View Service Areas
           </Link>
         </div>
       </section>

@@ -13,8 +13,20 @@ export const metadata = buildMetadata({
 });
 
 export default function AboutPage() {
+  const profileJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    name: 'About Imam Zaniar Ahmad',
+    url: `${siteContent.siteUrl}/about`,
+    mainEntity: { '@id': `${siteContent.siteUrl}/#person` },
+  };
+
   return (
     <div className="page-shell">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profileJsonLd) }}
+      />
       <section className="page-hero page-hero--with-media">
         <div className="page-hero__copy">
           <span className="eyebrow">About</span>
@@ -85,6 +97,9 @@ export default function AboutPage() {
           </p>
           <Link className="button button--primary" href="/contact">
             Contact Imam Zaniar
+          </Link>
+          <Link className="text-link" href="/locations">
+            View Ontario service areas <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>
       </section>
@@ -201,6 +216,9 @@ export default function AboutPage() {
           </Link>
           <Link className="button button--quiet" href="/lectures">
             Explore Lectures and Fundraising
+          </Link>
+          <Link className="button button--quiet" href="/testimonials">
+            Read Reviews
           </Link>
         </div>
       </section>

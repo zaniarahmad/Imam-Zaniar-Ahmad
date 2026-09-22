@@ -51,17 +51,10 @@ export default function BlogArticlePage({ params }) {
     dateModified: post.updated || post.date,
     image: `${siteContent.siteUrl}${articleImage}`,
     author: {
-      '@type': 'Person',
-      name: siteContent.name,
-      url: siteContent.siteUrl,
+      '@id': `${siteContent.siteUrl}/#person`,
     },
     publisher: {
-      '@type': 'Organization',
-      name: siteContent.name,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${siteContent.siteUrl}/icon-512.png`,
-      },
+      '@id': `${siteContent.siteUrl}/#person`,
     },
     mainEntityOfPage: {
       '@type': 'WebPage',

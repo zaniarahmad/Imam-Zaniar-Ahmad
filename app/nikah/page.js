@@ -164,7 +164,7 @@ const pageJsonLd = {
 };
 
 export const metadata = buildMetadata({
-  title: 'Nikah Imam and Islamic Marriage Officiant in Ontario',
+  title: 'Nikah and Ontario Marriage Officiation',
   description:
     'Book Imam Zaniar Ahmad for a religious Nikah, Ontario legal marriage officiation, or both, and use the free Muslim wedding planning guide.',
   path: '/nikah',

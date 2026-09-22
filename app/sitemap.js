@@ -2,14 +2,15 @@ import { siteContent } from '../lib/site-content';
 
 export default function sitemap() {
   const routes = [
-    { path: '/', lastModified: '2026-08-13' },
-    { path: '/about', lastModified: '2026-07-27' },
-    { path: '/nikah', lastModified: '2026-08-13' },
-    { path: '/lectures', lastModified: '2026-08-13' },
-    { path: '/testimonials', lastModified: '2026-07-27' },
+    { path: '/', lastModified: '2026-09-22' },
+    { path: '/about', lastModified: '2026-09-22' },
+    { path: '/nikah', lastModified: '2026-09-22' },
+    { path: '/locations', lastModified: '2026-09-22' },
+    { path: '/lectures', lastModified: '2026-09-22' },
+    { path: '/testimonials', lastModified: '2026-09-22' },
     { path: '/projects', lastModified: '2026-07-27' },
-    { path: '/blog', lastModified: '2026-08-13' },
-    { path: '/contact', lastModified: '2026-08-13' },
+    { path: '/blog', lastModified: '2026-09-22' },
+    { path: '/contact', lastModified: '2026-09-22' },
     { path: '/privacy', lastModified: '2026-07-27' },
     { path: '/accessibility', lastModified: '2026-07-27' },
   ];
@@ -24,5 +25,10 @@ export default function sitemap() {
     lastModified: new Date(post.updated || post.date),
   }));
 
-  return [...staticUrls, ...blogUrls];
+  const locationUrls = siteContent.locationPages.map((location) => ({
+    url: `${siteContent.siteUrl}/locations/${location.slug}`,
+    lastModified: new Date('2026-09-22'),
+  }));
+
+  return [...staticUrls, ...locationUrls, ...blogUrls];
 }

@@ -25,8 +25,7 @@ export default function OntarioServiceMap({ compact = false }) {
           </title>
           <desc id="ontario-map-description">
             A recognizable outline of Ontario. The accompanying cards list the
-            cities served in the Toronto, Peel-Halton, Hamilton-Waterloo, and
-            Niagara-Brant regions.
+            Southern Ontario communities served by region.
           </desc>
           <defs>
             <linearGradient id="ontario-fill" x1="0" x2="1" y1="0" y2="1">
@@ -68,6 +67,9 @@ export default function OntarioServiceMap({ compact = false }) {
             <div>
               <h3>{group.region}</h3>
               <p>{group.areas.join(' \u00b7 ')}</p>
+              <Link className="service-map__region-link" href={group.href}>
+                Local Nikah services <span aria-hidden="true">&rarr;</span>
+              </Link>
             </div>
             <span className="service-map__city-count">
               {group.areas.length} {group.areas.length === 1 ? 'city' : 'cities'}
