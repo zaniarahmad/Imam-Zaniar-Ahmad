@@ -45,53 +45,56 @@ export default function ContactPage() {
         <article className="contact-route contact-route--nikah">
           <div className="contact-route__top">
             <span className="contact-route__icon"><Icon name="form" /></span>
+            <p className="card-meta">Nikah and Marriage Officiation</p>
             <span className="contact-route__number">01</span>
           </div>
-          <p className="card-meta">Nikah and Marriage Officiation</p>
-          <h2>Book Through the Nikah Form</h2>
+          <h2>Book a Nikah</h2>
           <p>
-            Use the Google Form for religious Nikah (Katb Kitab) ceremonies,
-            Ontario legal marriage officiation, combined services, and travel
-            requests.
+            Use the booking form for a religious Nikah (Katb Kitab), Ontario
+            legal marriage officiation, or both services together.
           </p>
-          <div className="response-time-badge">
-            <Icon name="clock" />
-            <span>
-              <small>Guaranteed</small>
-              {siteContent.contact.nikahResponseTime}
-            </span>
+          <div className="contact-route__footer">
+            <div className="response-time-badge">
+              <Icon name="clock" />
+              <span>
+                <small>Guaranteed</small>
+                {siteContent.contact.nikahResponseTime}
+              </span>
+            </div>
+            <a
+              className="button button--cream"
+              href={siteContent.contact.nikahBookingForm}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="form" /> Book a Nikah
+            </a>
           </div>
-          <a
-            className="button button--cream"
-            href={siteContent.contact.nikahBookingForm}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon name="form" /> Book a Nikah
-          </a>
         </article>
 
         <article className="contact-route contact-route--lectures">
           <div className="contact-route__top">
             <span className="contact-route__icon"><Icon name="phoneMessage" /></span>
+            <p className="card-meta">Lectures and Fundraising</p>
             <span className="contact-route__number">02</span>
           </div>
-          <p className="card-meta">Lectures and Fundraising</p>
-          <h2>Call or Send an SMS Text</h2>
+          <h2>Call or Text</h2>
           <p>
-            Use the booking number for khutbahs, lectures, workshops, mosque
-            fundraising, charity appeals, and community events.
+            For khutbahs, lectures, workshops, mosque fundraising, charity
+            appeals, and community events.
           </p>
-          <a className="contact-route__phone" href={siteContent.contact.phoneHref}>
-            {siteContent.contact.phoneDisplay}
-          </a>
-          <div className="content-actions">
-            <a className="button button--primary" href={siteContent.contact.phoneHref}>
-              <Icon name="phone" /> Call Now
+          <div className="contact-route__footer contact-route__footer--lectures">
+            <a className="contact-route__phone" href={siteContent.contact.phoneHref}>
+              {siteContent.contact.phoneDisplay}
             </a>
-            <a className="button button--ghost" href={siteContent.contact.smsHref}>
-              <Icon name="message" /> Send an SMS
-            </a>
+            <div className="content-actions">
+              <a className="button button--primary" href={siteContent.contact.phoneHref}>
+                <Icon name="phone" /> Call
+              </a>
+              <a className="button button--ghost" href={siteContent.contact.smsHref}>
+                <Icon name="message" /> Text
+              </a>
+            </div>
           </div>
           <p className="phone-channel-note">
             <Icon name="phone" />
@@ -102,14 +105,13 @@ export default function ContactPage() {
         <article className="contact-route contact-route--general">
           <div className="contact-route__top">
             <span className="contact-route__icon"><Icon name="instagram" /></span>
+            <p className="card-meta">General Questions</p>
             <span className="contact-route__number">03</span>
           </div>
-          <p className="card-meta">General Questions</p>
           <h2>Message on Instagram</h2>
           <p>
-            For general questions that are not Nikkah (Katb Kitab) bookings,
-            lectures, or fundraising requests, send Imam Zaniar a message on
-            Instagram.
+            For general questions that are not Nikah (Katb Kitab), lecture, or
+            fundraising requests.
           </p>
           <a
             className="button button--primary"

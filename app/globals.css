@@ -8528,7 +8528,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   min-width: 0;
-  padding: clamp(1.5rem, 2.8vw, 2.5rem);
+  padding: clamp(1.25rem, 1.8vw, 1.8rem);
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 28px;
@@ -8568,18 +8568,19 @@ body {
 }
 
 .contact-route__top {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.75rem;
   width: 100%;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1rem;
 }
 
 .contact-route__icon {
   display: grid;
   place-items: center;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
   border-radius: 50%;
   background: var(--forest);
   color: var(--brass);
@@ -8591,24 +8592,25 @@ body {
 }
 
 .contact-route__icon .icon {
-  width: 1.35rem;
-  height: 1.35rem;
+  width: 1.1rem;
+  height: 1.1rem;
 }
 
 .contact-route__number {
   color: var(--brass);
   font-family: var(--serif);
-  font-size: 1.6rem;
+  font-size: 1.35rem;
 }
 
 .contact-route .card-meta {
-  margin-bottom: 0.65rem;
+  margin: 0;
+  justify-self: start;
 }
 
 .contact-route h2 {
-  max-width: 12ch;
-  font-size: clamp(1.8rem, 2.8vw, 2.7rem);
-  line-height: 1;
+  max-width: none;
+  font-size: clamp(1.65rem, 2.2vw, 2.25rem);
+  line-height: 1.05;
 }
 
 .contact-route--nikah h2 {
@@ -8616,9 +8618,10 @@ body {
 }
 
 .contact-route > p:not(.card-meta, .phone-channel-note) {
-  margin-top: 1rem;
+  margin-top: 0.7rem;
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.84rem;
+  line-height: 1.55;
 }
 
 .contact-route--nikah > p:not(.card-meta, .phone-channel-note) {
@@ -8633,12 +8636,46 @@ body {
   padding-top: 1.5rem;
 }
 
+.contact-route__footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.contact-route__footer > .button {
+  flex: 0 0 auto;
+  padding-block: 0.78rem;
+}
+
+.contact-route__footer--lectures {
+  justify-content: space-between;
+}
+
+.contact-route .phone-channel-note {
+  margin-top: 0.65rem;
+}
+
+.contact-route__footer .content-actions {
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+
+.contact-route__footer .content-actions .button {
+  min-height: 44px;
+  padding: 0.7rem 0.9rem;
+}
+
 .contact-route > .button {
   padding-block: 0.84rem;
 }
 
 .contact-route__phone {
-  margin-top: 1.2rem;
+  margin-top: 0;
   color: var(--forest);
   font-family: var(--serif);
   font-size: clamp(1.4rem, 2.3vw, 2rem);
@@ -8651,9 +8688,10 @@ body {
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 0.7rem;
-  width: 100%;
-  margin-top: 1.3rem;
-  padding: 0.85rem;
+  flex: 1 1 220px;
+  width: auto;
+  margin-top: 0;
+  padding: 0.72rem 0.8rem;
   border: 1px solid rgba(255, 253, 248, 0.16);
   border-radius: 18px;
   background: rgba(255, 253, 248, 0.08);
@@ -8861,6 +8899,28 @@ body {
   .contact-route {
     padding: 1.35rem;
     border-radius: 24px;
+  }
+
+  .contact-route__footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .contact-route__footer .response-time-badge {
+    flex-basis: auto;
+  }
+
+  .contact-route__footer > .button {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .contact-route__footer--lectures .content-actions {
+    width: 100%;
+  }
+
+  .contact-route__footer--lectures .content-actions .button {
+    flex: 1 1 0;
   }
 
   .contact-certificate {

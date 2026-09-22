@@ -88,9 +88,9 @@ export default function Home() {
           <div className="hero__arch" aria-hidden="true" />
           <Image
             src={siteContent.heroImage}
-            alt="Imam Zaniar Ahmad speaking during a Nikah ceremony"
-            width={1066}
-            height={1600}
+            alt="Imam Zaniar Ahmad holding Ontario marriage documents at an outdoor Nikah ceremony"
+            width={1206}
+            height={1478}
             priority
             fetchPriority="high"
             quality={68}
