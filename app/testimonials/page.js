@@ -56,7 +56,7 @@ const featuredReviews = [
       'Great experience with Imam Zaniar. He was punctual, organized, and made sure both the Islamic and legal requirements were done correctly. Highly recommended. Thank you Imam Zaniar!',
   },
   {
-    name: 'Rayan Abdulwahab',
+    name: 'Sarah Jamil',
     avatar: '/images/testimonials/rayan-abdulwahab.webp',
     quote:
       'I\'m very thankful to Imam Zaniar for doing such a great job at my nikkah. He made everything easy, meaningful, and well organized. Imam Zaniar kept our crowd engaged, entertained, and made the ceremony fun while still being professional. May Allah reward him.',
