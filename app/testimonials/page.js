@@ -19,7 +19,12 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
 
 const trustMetrics = [
   { icon: 'ring', value: '300+', label: 'Nikkahs Officiated' },
-  { icon: 'star', value: '110', label: 'Google Reviews' },
+  {
+    icon: 'star',
+    value: String(siteContent.reviews.reportedCount),
+    label: '5-Star Google Reviews',
+    href: siteContent.reviews.googleBusinessProfileUrl,
+  },
   { icon: 'calendar', value: 'Since 2017', label: 'Serving the Community' },
   { icon: 'microphone', value: '1,000+', label: 'Featured Event Appearances' },
 ];
@@ -66,7 +71,7 @@ const featuredReviews = [
 export const metadata = buildMetadata({
   title: 'Nikah Reviews and Testimonials',
   description:
-    'Explore 110 Google reviews and community feedback for Imam Zaniar Ahmad, with 300+ Nikkahs and appearances at 1,000+ events since 2017.',
+    'Explore 127 five-star Google reviews and community feedback for Imam Zaniar Ahmad, with 300+ Nikkahs and appearances at 1,000+ events since 2017.',
   path: '/testimonials',
 });
 
@@ -144,17 +149,41 @@ export default function TestimonialsPage() {
       <section className="testimonial-metrics" aria-label="Community experience">
         {trustMetrics.map((metric) => (
           <article key={metric.label}>
-            <span className="testimonial-metrics__icon"><Icon name={metric.icon} /></span>
-            <div>
-              <strong>{metric.value}</strong>
-              <p>{metric.label}</p>
-            </div>
+            {metric.href ? (
+              <a
+                className="testimonial-metrics__link"
+                href={metric.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View ${metric.value} ${metric.label} on Google`}
+              >
+                <span className="testimonial-metrics__icon"><Icon name={metric.icon} /></span>
+                <div>
+                  <strong>{metric.value}</strong>
+                  <p>{metric.label}</p>
+                </div>
+              </a>
+            ) : (
+              <div className="testimonial-metrics__link testimonial-metrics__link--static">
+                <span className="testimonial-metrics__icon"><Icon name={metric.icon} /></span>
+                <div>
+                  <strong>{metric.value}</strong>
+                  <p>{metric.label}</p>
+                </div>
+              </div>
+            )}
           </article>
         ))}
       </section>
 
       <section className="reviews-showcase">
-        <div className="reviews-showcase__proof">
+        <a
+          className="reviews-showcase__proof"
+          href={siteContent.reviews.googleBusinessProfileUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View Imam Zaniar Ahmad's 127 five-star reviews on Google"
+        >
           <div className="reviews-showcase__stars" aria-label="Google review community">
             {[0, 1, 2, 3, 4].map((star) => (
               <Icon name="star" key={star} />
@@ -162,9 +191,9 @@ export default function TestimonialsPage() {
           </div>
           <span className="eyebrow eyebrow--light">Google Reviews</span>
           <strong>{siteContent.reviews.reportedCount}</strong>
-          <p>reviews from couples, families, and community members</p>
+          <p>five-star reviews on Google from couples, families, and community members</p>
           <div className="reviews-showcase__monogram" aria-hidden="true">G</div>
-        </div>
+        </a>
 
         <div className="reviews-showcase__copy">
           <span className="eyebrow eyebrow--light">Community Trust</span>
