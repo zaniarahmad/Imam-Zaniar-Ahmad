@@ -7109,6 +7109,21 @@ body {
   font-size: 0.8rem;
 }
 
+.nikah-legal-grid li > small {
+  display: block;
+  width: fit-content;
+  margin-top: 0.65rem;
+  padding: 0.28rem 0.5rem;
+  border-radius: 999px;
+  background: var(--sage);
+  color: var(--forest);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
 .nikah-legal-grid h3 {
   margin-top: 0.75rem;
   font-size: 1.2rem;
@@ -7120,6 +7135,24 @@ body {
   color: var(--muted);
   font-size: 0.8rem;
   line-height: 1.55;
+}
+
+.nikah-legal-grid li > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.8rem;
+  color: var(--forest);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: var(--brass);
+  text-underline-offset: 0.22rem;
+}
+
+.nikah-legal-grid li > a .icon {
+  width: 0.8rem;
+  height: 0.8rem;
 }
 
 .nikah-planning-grid {

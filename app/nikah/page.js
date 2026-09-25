@@ -59,39 +59,54 @@ const religiousFoundations = [
 
 const ontarioPath = [
   {
+    responsible: 'The couple',
     title: 'Apply for the Licence',
     description:
-      'Begin through the Ontario municipality that will issue your marriage licence.',
+      'Apply through ServiceOntario or the Ontario municipality where you want to pick up the marriage licence.',
+    action: {
+      label: 'Apply for a marriage licence',
+      href: 'https://www.ontario.ca/page/apply-marriage-licence-online',
+    },
   },
   {
+    responsible: 'The couple',
     title: 'Collect and Check It',
     description:
-      'Bring the required identification and confirm every name and detail before leaving.',
+      'Bring the required identification, pick up the original licence, and check every name and detail before leaving.',
   },
   {
-    title: 'Align the Ceremony',
+    responsible: 'The couple',
+    title: 'Give the Licence to the Imam',
     description:
-      'Confirm the date, location, wali, mahr, witnesses, and legal service with the officiant.',
+      'Bring the original marriage licence to the ceremony and give it to Imam Zaniar before the legal officiation begins.',
   },
   {
-    title: 'Bring the Original',
+    responsible: 'Couple, witnesses and Imam',
+    title: 'Sign After the Ceremony',
     description:
-      'Keep the original marriage licence with your wedding-day documents.',
+      'The couple, witnesses, and registered officiant sign the required Ontario marriage documents.',
   },
   {
-    title: 'Complete the Ceremony',
+    responsible: 'Imam Zaniar',
+    title: 'File the Completed Licence',
     description:
-      'The registered officiant completes the legal paperwork after the ceremony.',
+      'Imam Zaniar sends the completed marriage licence to the Office of the Registrar General for registration.',
   },
   {
+    responsible: 'ServiceOntario',
     title: 'Provincial Registration',
     description:
-      'The officiant sends the completed documents for registration with Ontario.',
+      'Ontario says registration takes approximately 10 weeks. In practice, it can sometimes take about three months, depending on the Registrar General’s backlog.',
   },
   {
+    responsible: 'The couple',
     title: 'Order the Certificate',
     description:
-      'Apply online after the ceremony. Ontario can issue the certificate once the marriage is registered.',
+      'Apply online for the official marriage certificate. The order can be submitted after the ceremony, but it will only be fulfilled after registration is complete.',
+    action: {
+      label: 'Order a marriage certificate',
+      href: 'https://www.ontario.ca/page/how-get-copy-ontario-marriage-certificate-online',
+    },
   },
 ];
 
@@ -226,7 +241,7 @@ const faqItems = [
   {
     question: 'When Can We Order the Ontario Marriage Certificate?',
     answer:
-      'You may apply online after the ceremony, but ServiceOntario cannot issue the certificate until the marriage is registered. Ontario says registration takes approximately 10 weeks. Once registered, regular online processing is currently listed as 15 business days plus Canada Post delivery.',
+      'You may submit the online order after the ceremony, but ServiceOntario cannot issue the certificate until the marriage is registered. Ontario says registration takes approximately 10 weeks, although it can sometimes take about three months depending on the Registrar General’s backlog. Once registered, regular online processing is currently listed as 15 business days plus Canada Post delivery.',
   },
 ];
 
@@ -531,8 +546,15 @@ export default function NikahPage() {
             {ontarioPath.map((item, index) => (
               <li key={item.title}>
                 <span>{String(index + 1).padStart(2, '0')}</span>
+                <small>{item.responsible}</small>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
+                {item.action ? (
+                  <a href={item.action.href} target="_blank" rel="noreferrer noopener">
+                    {item.action.label}
+                    <Icon name="arrow" />
+                  </a>
+                ) : null}
               </li>
             ))}
           </ol>
@@ -607,8 +629,10 @@ export default function NikahPage() {
                 You can submit the online order after your wedding, but the
                 certificate cannot be issued until ServiceOntario registers the
                 marriage. Registration currently takes approximately 10 weeks.
-                Once registered, regular online certificate processing is
-                listed as 15 business days, plus delivery by Canada Post.
+                In practice, it can sometimes take about three months depending
+                on the Registrar General&apos;s backlog. Once registered, regular
+                online certificate processing is listed as 15 business days,
+                plus delivery by Canada Post.
               </p>
               <p>
                 The Record of Solemnization received on the wedding day is not
