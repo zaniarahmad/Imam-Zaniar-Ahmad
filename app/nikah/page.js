@@ -91,7 +91,114 @@ const ontarioPath = [
   {
     title: 'Order the Certificate',
     description:
-      'After registration, the couple can order the official Ontario marriage certificate.',
+      'Apply online after the ceremony. Ontario can issue the certificate once the marriage is registered.',
+  },
+];
+
+const marriageLicenceMunicipalities = [
+  {
+    region: 'Ontario and Toronto',
+    links: [
+      {
+        label: 'ServiceOntario online application',
+        href: 'https://www.ontario.ca/page/apply-marriage-licence-online',
+      },
+      {
+        label: 'Toronto',
+        href: 'https://www.toronto.ca/services-payments/venues-facilities-bookings/getting-married/applying-for-a-marriage-licence/booking-a-marriage-licence-appointment/',
+      },
+    ],
+  },
+  {
+    region: 'Peel and Halton',
+    links: [
+      {
+        label: 'Mississauga',
+        href: 'https://www.mississauga.ca/services-and-programs/pay-apply-report/apply-for-a-marriage-licence/',
+      },
+      {
+        label: 'Brampton',
+        href: 'https://www.brampton.ca/en/city-hall/marriage-services/pages/marriage-licences.aspx',
+      },
+      {
+        label: 'Oakville',
+        href: 'https://www.oakville.ca/town-hall/licences-permits-services/marriage-licence/',
+      },
+      {
+        label: 'Burlington',
+        href: 'https://www.burlington.ca/en/applications-licences-and-permits/marriage-licences.aspx',
+      },
+      {
+        label: 'Milton',
+        href: 'https://www.milton.ca/en/living-in-milton/marriage-licences.aspx',
+      },
+    ],
+  },
+  {
+    region: 'York and Durham',
+    links: [
+      {
+        label: 'Markham',
+        href: 'https://www.markham.ca/permits-licences-taxes/wedding-services/marriage-licence-application',
+      },
+      {
+        label: 'Richmond Hill',
+        href: 'https://www.richmondhill.ca/en/online-services/Marriage-and-Weddings.aspx',
+      },
+      {
+        label: 'Vaughan',
+        href: 'https://www.vaughan.ca/about-city-vaughan/departments/office-city-clerk/marriage-services',
+      },
+      {
+        label: 'Ajax',
+        href: 'https://ajax.ca/life-in-ajax/town-services/official-document-services/',
+      },
+      {
+        label: 'Pickering',
+        href: 'https://www.pickering.ca/council-city-administration/marriages/',
+      },
+      {
+        label: 'Whitby',
+        href: 'https://www.whitby.ca/services-and-payments/applications-licences-and-permits/marriage-licences-and-civil-marriage-ceremonies/',
+      },
+      {
+        label: 'Oshawa',
+        href: 'https://www.oshawa.ca/city-hall/applications-licences-and-permits/marriages/',
+      },
+    ],
+  },
+  {
+    region: 'Hamilton, Niagara and Waterloo Region',
+    links: [
+      {
+        label: 'Hamilton',
+        href: 'https://www.hamilton.ca/city-council/city-clerks-office/marriage-services/apply-marriage-licence',
+      },
+      {
+        label: 'Niagara Falls',
+        href: 'https://niagarafalls.ca/city-government/marriages/marriage-licences/',
+      },
+      {
+        label: 'St. Catharines',
+        href: 'https://www.stcatharines.ca/applications-licences-and-permits/marriage-licences/',
+      },
+      {
+        label: 'Kitchener',
+        href: 'https://www.kitchener.ca/living-in-kitchener/marriage-and-divorce/',
+      },
+      {
+        label: 'Waterloo',
+        href: 'https://www.waterloo.ca/community-support/marriages-and-oaths/apply-for-a-marriage-licence/',
+      },
+      {
+        label: 'Cambridge',
+        href: 'https://www.cambridge.ca/resident-services/marriage-weddings/',
+      },
+      {
+        label: 'Guelph',
+        href: 'https://guelph.ca/city-government/city-hall/services/serviceguelph/',
+      },
+    ],
   },
 ];
 
@@ -115,6 +222,11 @@ const faqItems = [
     question: 'What Should We Confirm Before the Ceremony?',
     answer:
       'Confirm consent, the wali, mahr, witnesses, ceremony format, legal officiation, paperwork, date, location, and arrival time with the Imam.',
+  },
+  {
+    question: 'When Can We Order the Ontario Marriage Certificate?',
+    answer:
+      'You may apply online after the ceremony, but ServiceOntario cannot issue the certificate until the marriage is registered. Ontario says registration takes approximately 10 weeks. Once registered, regular online processing is currently listed as 15 business days plus Canada Post delivery.',
   },
 ];
 
@@ -142,7 +254,7 @@ const pageJsonLd = {
       description:
         'A practical guide to Islamic Nikah requirements, Ontario marriage licences, ceremony preparation, and choosing a Muslim wedding officiant.',
       url: `${siteContent.siteUrl}/nikah`,
-      dateModified: '2026-07-27',
+      dateModified: '2026-09-24',
       author: {
         '@type': 'Person',
         name: siteContent.name,
@@ -455,6 +567,63 @@ export default function NikahPage() {
               ))}
             </div>
           </article>
+        </section>
+
+        <section className="nikah-government-guide" id="ontario-marriage-licence-links">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">Official Municipal Links</span>
+              <h2>Where to Apply for an Ontario Marriage Licence</h2>
+            </div>
+            <p className="section-lead">
+              Start with ServiceOntario or choose the municipality where you
+              want to pick up the licence. A licence issued by an authorized
+              Ontario municipality is valid anywhere in the province for three
+              months from its issue date.
+            </p>
+          </div>
+          <div className="nikah-municipality-grid">
+            {marriageLicenceMunicipalities.map((group) => (
+              <section key={group.region}>
+                <h3>{group.region}</h3>
+                <div>
+                  {group.links.map((link) => (
+                    <a key={link.href} href={link.href} target="_blank" rel="noreferrer noopener">
+                      <span>{link.label}</span>
+                      <Icon name="arrow" />
+                    </a>
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
+
+          <aside className="nikah-certificate-timing">
+            <span className="card-icon"><Icon name="document" /></span>
+            <div>
+              <p className="card-meta">After the Ceremony</p>
+              <h3>When to Order Your Ontario Marriage Certificate</h3>
+              <p>
+                You can submit the online order after your wedding, but the
+                certificate cannot be issued until ServiceOntario registers the
+                marriage. Registration currently takes approximately 10 weeks.
+                Once registered, regular online certificate processing is
+                listed as 15 business days, plus delivery by Canada Post.
+              </p>
+              <p>
+                The Record of Solemnization received on the wedding day is not
+                the official marriage certificate.
+              </p>
+            </div>
+            <a
+              className="button button--primary"
+              href="https://www.ontario.ca/page/how-get-copy-ontario-marriage-certificate-online"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Order the Certificate
+            </a>
+          </aside>
         </section>
 
         <section className="nikah-guide-block" id="nikah-questions">

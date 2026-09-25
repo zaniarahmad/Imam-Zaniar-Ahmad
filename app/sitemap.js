@@ -4,7 +4,7 @@ export default function sitemap() {
   const routes = [
     { path: '/', lastModified: '2026-09-22' },
     { path: '/about', lastModified: '2026-09-22' },
-    { path: '/nikah', lastModified: '2026-09-22' },
+    { path: '/nikah', lastModified: '2026-09-24' },
     { path: '/locations', lastModified: '2026-09-24' },
     { path: '/lectures', lastModified: '2026-09-22' },
     { path: '/testimonials', lastModified: '2026-09-22' },

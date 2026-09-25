@@ -7224,6 +7224,84 @@ body {
   height: 1rem;
 }
 
+.nikah-government-guide {
+  padding: clamp(1.6rem, 3vw, 2.7rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--paper);
+}
+
+.nikah-municipality-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.nikah-municipality-grid > section {
+  min-width: 0;
+  padding: 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--cream);
+}
+
+.nikah-municipality-grid h3 {
+  min-height: 2.5em;
+  font-size: 1.08rem;
+  line-height: 1.25;
+}
+
+.nikah-municipality-grid section > div {
+  display: grid;
+  margin-top: 0.75rem;
+}
+
+.nikah-municipality-grid a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.62rem 0;
+  border-top: 1px solid var(--line);
+  color: var(--forest);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.nikah-municipality-grid a .icon {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.nikah-certificate-timing {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.1rem;
+  margin-top: 1rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  background: var(--sage);
+}
+
+.nikah-certificate-timing h3 {
+  margin-top: 0.25rem;
+  font-size: 1.35rem;
+}
+
+.nikah-certificate-timing p:not(.card-meta) {
+  max-width: 80ch;
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.nikah-certificate-timing .button {
+  white-space: nowrap;
+}
+
 .testimonials-page__hero {
   max-width: 1080px;
   padding-bottom: 2.5rem;
@@ -7241,6 +7319,38 @@ body {
 
   .nikah-legal-grid li:last-child {
     grid-column: auto;
+  }
+
+  .nikah-municipality-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nikah-certificate-timing {
+    grid-template-columns: auto 1fr;
+  }
+
+  .nikah-certificate-timing .button {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 620px) {
+  .nikah-municipality-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nikah-municipality-grid h3 {
+    min-height: 0;
+  }
+
+  .nikah-certificate-timing {
+    grid-template-columns: 1fr;
+  }
+
+  .nikah-certificate-timing .button {
+    grid-column: auto;
+    width: 100%;
   }
 }
 
