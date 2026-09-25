@@ -68,7 +68,7 @@ export default function BlogIndexPage() {
         <div className="section-heading">
           <div>
             <span className="eyebrow">Featured Resource</span>
-            <h2>Explore the Free Nikkah Guide</h2>
+            <h2>Explore The Simple Nikkah Guide</h2>
           </div>
         </div>
 

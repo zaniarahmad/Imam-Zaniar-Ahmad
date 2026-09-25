@@ -325,7 +325,7 @@ export default function NikahPage() {
             Book a Nikah
           </Link>
           <a className="button button--ghost" href="#guide-preview">
-            Read the Free Nikah Guide
+            Read The Simple Nikkah Guide
           </a>
         </div>
         <p className="nikah-response-note">
@@ -349,7 +349,7 @@ export default function NikahPage() {
           <span className="nikah-path-switcher__icon"><Icon name="book" /></span>
           <span>
             <small>Plan with Clarity</small>
-            <strong>Free Nikah Guide</strong>
+            <strong>The Simple Nikkah Guide</strong>
             <em>Read online or download the PDF</em>
           </span>
           <Icon name="arrow" />
@@ -467,8 +467,8 @@ export default function NikahPage() {
       <section className="nikah-pdf-section" id="guide-preview">
         <div className="nikah-pdf-section__heading">
           <div>
-            <span className="eyebrow eyebrow--light">The Original Guide</span>
-            <h2>Read the Free Nikah Guide</h2>
+            <span className="eyebrow eyebrow--light">By Imam Zaniar Ahmad</span>
+            <h2>Read The Simple Nikkah Guide</h2>
             <p>
               Browse the complete guide below, download a copy, or continue to
               the searchable planning notes after the document.
@@ -485,7 +485,7 @@ export default function NikahPage() {
         <div className="nikah-pdf-frame">
           <iframe
             src={`${siteContent.guide.downloadPath}#view=FitH&toolbar=1&navpanes=0`}
-            title="Free Nikah Guide for Ontario couples"
+            title="The Simple Nikkah Guide by Imam Zaniar Ahmad"
             loading="lazy"
           />
         </div>

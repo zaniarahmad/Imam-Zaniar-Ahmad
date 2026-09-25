@@ -76,7 +76,7 @@ export default function Home() {
 
           <div className="hero__secondary-actions">
             <Link href="/nikah#guide-preview">
-              Get the Free Nikkah Guide <span aria-hidden="true">&rarr;</span>
+              Get The Simple Nikkah Guide <span aria-hidden="true">&rarr;</span>
             </Link>
             <a href={siteContent.contact.phoneHref}>
               Call for Lectures or Fundraising
@@ -245,7 +245,7 @@ export default function Home() {
           </p>
           <div className="content-actions">
             <Link className="button button--primary" href="/nikah#guide-preview">
-              Read the Free Nikah Guide
+              Read The Simple Nikkah Guide
             </Link>
             <Link className="text-link" href="/blog/prepare-for-a-nikah-in-ontario">
               Prepare for your Nikkah in Ontario <span aria-hidden="true">&rarr;</span>
@@ -278,7 +278,7 @@ export default function Home() {
             Book a Nikah
           </Link>
           <Link className="button button--quiet" href="/nikah#guide-preview">
-            Read the Free Nikah Guide
+            Read The Simple Nikkah Guide
           </Link>
           <Link className="button button--quiet" href="/contact">
             Contact Imam Zaniar
