@@ -19,7 +19,7 @@ export default function LocationsPage() {
         <h1>Nikah Services Across Southern Ontario</h1>
         <p className="section-lead">
           Imam Zaniar Ahmad serves couples across Toronto, the GTA, Hamilton,
-          Niagara, Halton, Waterloo Region, and nearby Ontario communities.
+          Niagara, Halton, Durham, Waterloo Region, and nearby Ontario communities.
           Choose your region for practical local booking information.
         </p>
         <div className="content-actions">

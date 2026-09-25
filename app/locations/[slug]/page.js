@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import Icon from '../../components/ui-icon';
@@ -115,6 +116,60 @@ export default function LocationPage({ params }) {
           {location.areas.map((area) => <span key={area}>{area}</span>)}
         </div>
       </section>
+
+      {location.venues?.length ? (
+        <section className="section section--compact venue-experience" aria-labelledby="venue-experience-title">
+          <div className="section-heading section-heading--editorial">
+            <div>
+              <span className="eyebrow">Past Ceremony Locations</span>
+              <h2 id="venue-experience-title">Wedding Venues Served in This Region</h2>
+            </div>
+            <p className="section-lead">
+              Real ceremony settings from the region, paired with genuine Google feedback from couples Imam Zaniar has served.
+            </p>
+          </div>
+          <div className="venue-experience__grid">
+            {location.venues.map((venue, venueIndex) => (
+              <article className="venue-experience__card" key={venue.name}>
+                <figure className="venue-experience__photo">
+                  <Image
+                    src={venue.image}
+                    alt={venue.alt}
+                    width={venue.imageWidth}
+                    height={venue.imageHeight}
+                    sizes="(max-width: 720px) 92vw, (max-width: 1100px) 46vw, 31vw"
+                    priority={venueIndex === 0}
+                  />
+                </figure>
+                <div className="venue-experience__body">
+                  <span className="venue-experience__city">{venue.city}</span>
+                  <h3>{venue.name}</h3>
+                  <p className="venue-experience__caption">{venue.caption}</p>
+                  <blockquote className="venue-experience__review">
+                    <div className="venue-experience__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p>&ldquo;{venue.review.quote}&rdquo;</p>
+                    <footer>
+                      <strong>{venue.review.name}</strong>
+                      <span>{venue.review.context}</span>
+                    </footer>
+                  </blockquote>
+                  <a
+                    className="text-link venue-experience__review-link"
+                    href={siteContent.reviews.googleBusinessProfileUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Google reviews <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+          <p className="venue-experience__note">
+            Venue names identify past ceremony locations and do not imply sponsorship or endorsement. Reviews are labelled when the reviewer did not identify a venue.
+          </p>
+        </section>
+      ) : null}
 
       <section className="section section--compact">
         <div className="section-heading section-heading--editorial">
