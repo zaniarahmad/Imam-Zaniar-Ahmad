@@ -96,7 +96,7 @@ const ontarioPath = [
     responsible: 'ServiceOntario',
     title: 'Provincial Registration',
     description:
-      'Ontario says registration takes approximately 10 weeks. In practice, it can sometimes take about three months, depending on the Registrar General’s backlog.',
+      'Ontario says registration takes approximately 10 weeks. Your Simple Nikah Guide recommends allowing about three to four months because the Registrar General’s backlog can vary.',
   },
   {
     responsible: 'The couple',
@@ -241,7 +241,7 @@ const faqItems = [
   {
     question: 'When Can We Order the Ontario Marriage Certificate?',
     answer:
-      'You may submit the online order after the ceremony, but ServiceOntario cannot issue the certificate until the marriage is registered. Ontario says registration takes approximately 10 weeks, although it can sometimes take about three months depending on the Registrar General’s backlog. Once registered, regular online processing is currently listed as 15 business days plus Canada Post delivery.',
+      'You may submit the online order after the ceremony, but ServiceOntario cannot issue the certificate until the marriage is registered. Ontario says registration takes approximately 10 weeks. The Simple Nikah Guide recommends allowing about three to four months because the Registrar General’s backlog can vary. Once registered, regular online processing is currently listed as 15 business days plus Canada Post delivery.',
   },
 ];
 
@@ -539,7 +539,8 @@ export default function NikahPage() {
             </div>
             <p className="section-lead">
               These steps apply when legal Ontario marriage officiation is part
-              of the booking.
+              of the booking. They follow the process in the{' '}
+              <a href="#guide-preview">Simple Nikah Guide</a> available on this page.
             </p>
           </div>
           <ol className="nikah-legal-grid">
@@ -628,11 +629,13 @@ export default function NikahPage() {
               <p>
                 You can submit the online order after your wedding, but the
                 certificate cannot be issued until ServiceOntario registers the
-                marriage. Registration currently takes approximately 10 weeks.
-                In practice, it can sometimes take about three months depending
-                on the Registrar General&apos;s backlog. Once registered, regular
-                online certificate processing is listed as 15 business days,
-                plus delivery by Canada Post.
+                marriage. Ontario currently estimates approximately 10 weeks
+                for registration. For a simpler experience, the Simple Nikah
+                Guide recommends waiting about three to four months after Imam
+                Zaniar sends the licence before placing the online certificate
+                order, since the Registrar General&apos;s backlog can vary. Once
+                registered, regular online certificate processing is listed as
+                15 business days, plus delivery by Canada Post.
               </p>
               <p>
                 The Record of Solemnization received on the wedding day is not

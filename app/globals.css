@@ -7264,6 +7264,14 @@ body {
   background: var(--paper);
 }
 
+.nikah-guide-block .section-lead a {
+  color: var(--forest);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: var(--brass);
+  text-underline-offset: 0.22rem;
+}
+
 .nikah-municipality-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
