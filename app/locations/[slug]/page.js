@@ -166,7 +166,7 @@ export default function LocationPage({ params }) {
             ))}
           </div>
           <p className="venue-experience__note">
-            Venue names identify past ceremony locations and do not imply sponsorship or endorsement. Reviews are labelled when the reviewer did not identify a venue.
+            Venue names identify past ceremony locations and do not imply sponsorship or endorsement. Reviews shown are from Imam Zaniar Ahmad&apos;s Google Business Profile.
           </p>
         </section>
       ) : null}
