@@ -179,7 +179,7 @@ gtag('config', ${JSON.stringify(ga4Id)}, { anonymize_ip: true });`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    General Questions on Instagram
+                    Learn More About Imam Zaniar
                   </a>
                 </nav>
               </details>
@@ -235,9 +235,9 @@ gtag('config', ${JSON.stringify(ga4Id)}, { anonymize_ip: true });`}
                     href={siteContent.contact.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Ask Imam Zaniar Ahmad a general question on Instagram"
+                    aria-label="View Imam Zaniar Ahmad on Instagram"
                   >
-                    General questions on Instagram
+                    Learn more about Imam Zaniar
                   </a>
                 </li>
               </ul>

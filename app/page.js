@@ -84,22 +84,42 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero__portrait" aria-label="Portrait of Imam Zaniar Ahmad">
-          <div className="hero__arch" aria-hidden="true" />
-          <Image
-            src={siteContent.heroImage}
-            alt="Imam Zaniar Ahmad holding Ontario marriage documents at an outdoor Nikah ceremony"
-            width={1206}
-            height={1478}
-            priority
-            fetchPriority="high"
-            quality={68}
-            sizes="(max-width: 820px) 88vw, 34vw"
-            className="hero-photo"
-          />
-          <div className="hero__caption">
-            <span>Ontario</span>
-            <strong>Registered Marriage Officiant</strong>
+        <div className="hero__visual">
+          <div
+            className="hero__acceptance"
+            aria-label="Nikah acceptance wording in Arabic, Urdu, transliteration, and English"
+          >
+            <span className="hero__acceptance-arabic" lang="ar" dir="rtl">
+              قَبِلْتُ زَوَاجَهَا
+            </span>
+            <span className="hero__acceptance-urdu" lang="ur" dir="rtl">
+              آپ کو قبول ہے
+            </span>
+            <span className="hero__acceptance-transliteration" lang="ur-Latn">
+              Aap ko qubool hai
+            </span>
+            <span className="hero__acceptance-english" lang="en">
+              “I accept”
+            </span>
+          </div>
+
+          <div className="hero__portrait" aria-label="Portrait of Imam Zaniar Ahmad">
+            <div className="hero__arch" aria-hidden="true" />
+            <Image
+              src={siteContent.heroImage}
+              alt="Imam Zaniar Ahmad holding Ontario marriage documents at an outdoor Nikah ceremony"
+              width={1206}
+              height={1478}
+              priority
+              fetchPriority="high"
+              quality={68}
+              sizes="(max-width: 820px) 88vw, 34vw"
+              className="hero-photo"
+            />
+            <div className="hero__caption">
+              <span>Ontario</span>
+              <strong>Registered Marriage Officiant</strong>
+            </div>
           </div>
         </div>
 

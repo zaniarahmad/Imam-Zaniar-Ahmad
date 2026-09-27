@@ -11,7 +11,7 @@ const certificateImage =
 export const metadata = buildMetadata({
   title: 'Contact and Book Imam Zaniar Ahmad',
   description:
-    'Use the Nikkah booking form, call or text for Islamic lectures and fundraising, or message Imam Zaniar Ahmad on Instagram with general questions.',
+    'Use the Nikkah booking form or call and text Imam Zaniar Ahmad for Islamic weddings, lectures, and fundraising across Ontario.',
   path: '/contact',
 });
 
@@ -23,9 +23,9 @@ export default function ContactPage() {
           <span className="eyebrow">Contact and Booking</span>
           <h1>Choose the Right Way to Reach Imam Zaniar</h1>
           <p className="section-lead">
-            Nikkah (Katb Kitab) bookings, lecture and fundraising requests,
-            and general questions each have a dedicated contact method so your
-            message reaches the right place.
+            Nikkah (Katb Kitab) bookings and lecture or fundraising requests
+            each have a dedicated contact method. Instagram offers a closer
+            look at Imam Zaniar&apos;s reminders, community work, and updates.
           </p>
         </div>
         <figure className="page-hero__media page-hero__media--landscape">
@@ -70,6 +70,22 @@ export default function ContactPage() {
               <Icon name="form" /> Book a Nikah
             </a>
           </div>
+          <div className="contact-route__direct contact-route__direct--nikah">
+            <a
+              className="contact-route__phone contact-route__phone--light"
+              href={siteContent.contact.phoneHref}
+            >
+              {siteContent.contact.phoneDisplay}
+            </a>
+            <div className="content-actions">
+              <a className="button button--gold" href={siteContent.contact.phoneHref}>
+                <Icon name="phone" /> Call
+              </a>
+              <a className="button button--outline-light" href={siteContent.contact.smsHref}>
+                <Icon name="message" /> Text
+              </a>
+            </div>
+          </div>
         </article>
 
         <article className="contact-route contact-route--lectures">
@@ -105,13 +121,13 @@ export default function ContactPage() {
         <article className="contact-route contact-route--general">
           <div className="contact-route__top">
             <span className="contact-route__icon"><Icon name="instagram" /></span>
-            <p className="card-meta">General Questions</p>
+            <p className="card-meta">Learn More About Imam Zaniar</p>
             <span className="contact-route__number">03</span>
           </div>
-          <h2>Message on Instagram</h2>
+          <h2>Connect on Instagram</h2>
           <p>
-            For general questions that are not Nikah (Katb Kitab), lecture, or
-            fundraising requests.
+            Explore reminders, community work, lectures, and updates from Imam
+            Zaniar.
           </p>
           <a
             className="button button--primary"

@@ -1584,6 +1584,60 @@ li + li {
   font-weight: 700;
 }
 
+.hero__visual {
+  align-self: center;
+  justify-self: end;
+  display: grid;
+  justify-items: end;
+  width: min(100%, 470px);
+  min-width: 0;
+}
+
+.hero__acceptance {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: end;
+  gap: 0.12rem;
+  margin: 0 2.75rem 0.85rem 0;
+  color: rgba(223, 184, 103, 0.82);
+  text-align: right;
+  text-shadow: 0 1px 18px rgba(197, 161, 90, 0.12);
+}
+
+.hero__acceptance-arabic,
+.hero__acceptance-urdu {
+  font-family: "Noto Naskh Arabic", "Segoe UI", Tahoma, serif;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.hero__acceptance-arabic {
+  font-size: clamp(1.45rem, 2vw, 2rem);
+}
+
+.hero__acceptance-urdu {
+  color: rgba(223, 184, 103, 0.7);
+  font-size: clamp(1.1rem, 1.45vw, 1.42rem);
+}
+
+.hero__acceptance-transliteration,
+.hero__acceptance-english {
+  font-family: var(--serif);
+  font-size: 0.76rem;
+  letter-spacing: 0.035em;
+}
+
+.hero__acceptance-transliteration {
+  margin-top: 0.15rem;
+  color: rgba(255, 253, 248, 0.58);
+  font-style: italic;
+}
+
+.hero__acceptance-english {
+  color: rgba(223, 184, 103, 0.72);
+}
+
 .hero__portrait {
   position: relative;
   align-self: center;
@@ -3009,6 +3063,18 @@ li + li {
   .hero__portrait {
     justify-self: center;
     width: min(88%, 430px);
+  }
+
+  .hero__visual {
+    justify-self: center;
+    justify-items: center;
+    width: min(100%, 470px);
+  }
+
+  .hero__acceptance {
+    justify-items: center;
+    margin: 0 0 1.2rem;
+    text-align: center;
   }
 
   .hero__credentials {
@@ -7422,6 +7488,14 @@ body {
     font-size: clamp(2.1rem, 8.6vw, 2.8rem);
   }
 
+  .hero__acceptance-arabic {
+    font-size: 1.45rem;
+  }
+
+  .hero__acceptance-urdu {
+    font-size: 1.08rem;
+  }
+
   .hero__tagline {
     font-size: 1.35rem;
   }
@@ -8827,6 +8901,33 @@ body {
   justify-content: space-between;
 }
 
+.contact-route__direct {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  width: 100%;
+  margin-top: 0.8rem;
+}
+
+.contact-route__direct .content-actions {
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+
+.contact-route__direct .button {
+  min-height: 42px;
+  padding: 0.65rem 0.85rem;
+}
+
+.contact-route__direct--nikah {
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(255, 253, 248, 0.14);
+}
+
 .contact-route .phone-channel-note {
   margin-top: 0.65rem;
 }
@@ -8852,6 +8953,11 @@ body {
   font-size: clamp(1.4rem, 2.3vw, 2rem);
   font-weight: 650;
   text-decoration: none;
+}
+
+.contact-route__phone--light {
+  color: var(--paper);
+  font-size: clamp(1.25rem, 1.8vw, 1.7rem);
 }
 
 .response-time-badge {
@@ -9201,6 +9307,19 @@ body {
   }
 
   .contact-route__footer--lectures .content-actions .button {
+    flex: 1 1 0;
+  }
+
+  .contact-route__direct {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .contact-route__direct .content-actions {
+    width: 100%;
+  }
+
+  .contact-route__direct .content-actions .button {
     flex: 1 1 0;
   }
 

@@ -4,7 +4,7 @@ import { siteContent } from '../../lib/site-content';
 export const metadata = buildMetadata({
   title: 'Privacy Policy',
   description:
-    'Read how imamzaniarahmad.com handles website analytics and links to Google Forms, phone, SMS, and Instagram for bookings and questions.',
+    'Read how imamzaniarahmad.com handles website analytics and links to Google Forms, phone, SMS, and Instagram.',
   path: '/privacy',
 });
 
@@ -37,15 +37,17 @@ export default function PrivacyPage() {
 
         <h2>Phone and SMS</h2>
         <p>
-          Lecture and fundraising inquiries are arranged through a regular phone
-          call or SMS text to {siteContent.contact.phoneDisplay}. Your telephone
-          provider&apos;s normal privacy and messaging terms apply.
+          Nikah, lecture, and fundraising inquiries may be arranged through a
+          regular phone call or SMS text to {siteContent.contact.phoneDisplay}.
+          Your telephone provider&apos;s normal privacy and messaging terms apply.
         </p>
 
         <h2>Instagram</h2>
         <p>
-          General questions may be sent through Instagram. Messages sent there
-          are handled according to Instagram&apos;s terms and privacy practices.
+          The website links to Imam Zaniar&apos;s Instagram profile so visitors can
+          explore reminders, community work, lectures, and updates. Activity on
+          Instagram is handled according to Instagram&apos;s terms and privacy
+          practices.
         </p>
 
         <h2>Analytics</h2>
@@ -58,8 +60,9 @@ export default function PrivacyPage() {
 
         <h2>Choose the Correct Contact Method</h2>
         <p>
-          Use the Google Form for Nikah bookings, call or send a regular SMS for
-          lectures and fundraising, and use Instagram for general questions.
+          Use the Google Form to submit a detailed Nikah booking request, or call
+          or send a regular SMS for Nikah, lecture, and fundraising inquiries.
+          Instagram is provided as a way to learn more about Imam Zaniar.
           {` ${siteContent.contact.phoneOnlyNote}`}
         </p>
       </section>
