@@ -459,7 +459,7 @@ export default function NikahPage() {
         <div className="section-heading">
           <div>
             <span className="eyebrow">Choose Your Service</span>
-            <h2>Religious, Legal, or Both</h2>
+            <h2>Here to Serve Your Needs</h2>
           </div>
           <p className="section-lead">
             A religious Nikah and an Ontario legal marriage are related, but
