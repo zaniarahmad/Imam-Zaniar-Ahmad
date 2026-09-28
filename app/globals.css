@@ -7053,6 +7053,158 @@ body {
   border: 0;
 }
 
+.nikah-mobile-guide {
+  display: none;
+}
+
+.nikah-mobile-guide__page {
+  padding: 1.25rem;
+  border: 1px solid rgba(205, 168, 123, 0.45);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 92% 4%, rgba(205, 168, 123, 0.18), transparent 11rem),
+    #fbf6ed;
+  color: #5b4032;
+  box-shadow: 0 14px 32px rgba(3, 18, 13, 0.2);
+}
+
+.nikah-mobile-guide__page + .nikah-mobile-guide__page {
+  margin-top: 1rem;
+}
+
+.nikah-mobile-guide__page > header {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(205, 168, 123, 0.65);
+}
+
+.nikah-mobile-guide__page > header span {
+  color: #9b7250;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.nikah-mobile-guide__page h3 {
+  margin-top: 0.2rem;
+  color: #5b4032;
+  font-size: clamp(1.7rem, 8vw, 2.35rem);
+  line-height: 1.03;
+}
+
+.nikah-mobile-guide__page h4 {
+  color: #5b4032;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.nikah-mobile-guide__overview,
+.nikah-mobile-guide__requirements {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.nikah-mobile-guide__overview > section,
+.nikah-mobile-guide__requirements > section {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: 0.75rem;
+  padding: 0.9rem;
+  border: 1px solid rgba(205, 168, 123, 0.42);
+  border-radius: 14px;
+  background: rgba(255, 253, 248, 0.66);
+}
+
+.nikah-mobile-guide__overview b,
+.nikah-mobile-guide__requirements b,
+.nikah-mobile-guide__steps > li > b {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 50%;
+  background: #ead7bd;
+  color: #68442f;
+  font-family: var(--serif);
+  font-size: 0.78rem;
+}
+
+.nikah-mobile-guide__overview ul,
+.nikah-mobile-guide__checklist ul {
+  margin-top: 0.55rem;
+  padding-left: 1rem;
+  color: #725a4c;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.nikah-mobile-guide__overview li + li,
+.nikah-mobile-guide__checklist li + li {
+  margin-top: 0.28rem;
+}
+
+.nikah-mobile-guide__note,
+.nikah-mobile-guide__checklist {
+  margin-top: 1rem;
+  padding: 0.9rem;
+  border-left: 3px solid #cda87b;
+  border-radius: 4px 12px 12px 4px;
+  background: #f2e3cf;
+  color: #684c3d;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.nikah-mobile-guide__steps {
+  display: grid;
+  gap: 0;
+  margin-top: 0.4rem;
+  padding: 0;
+  list-style: none;
+}
+
+.nikah-mobile-guide__steps > li {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0.85rem 0;
+  border-bottom: 1px dashed rgba(205, 168, 123, 0.55);
+}
+
+.nikah-mobile-guide__steps p,
+.nikah-mobile-guide__requirements p {
+  margin-top: 0.25rem;
+  color: #735d50;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.nikah-mobile-guide__links {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 1rem;
+}
+
+.nikah-mobile-guide__links a {
+  display: block;
+  padding: 0.75rem 0.85rem;
+  border-radius: 999px;
+  background: #68442f;
+  color: #fffdf8;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.nikah-mobile-guide__checklist h4 {
+  font-size: 1rem;
+}
+
 .nikah-pdf-section__fallback {
   max-width: 1040px;
   margin: 1rem auto 0;
@@ -7477,8 +7629,14 @@ body {
     flex-direction: column;
   }
 
-  .nikah-pdf-frame iframe {
-    height: 640px;
+  .nikah-pdf-frame {
+    display: none;
+  }
+
+  .nikah-mobile-guide {
+    display: block;
+    max-width: 35rem;
+    margin-inline: auto;
   }
 }
 
@@ -7517,14 +7675,6 @@ body {
 
   .nikah-pdf-section__heading {
     padding-inline: 0.45rem;
-  }
-
-  .nikah-pdf-frame {
-    border-radius: 15px;
-  }
-
-  .nikah-pdf-frame iframe {
-    height: 560px;
   }
 
   .nikah-foundation-grid,

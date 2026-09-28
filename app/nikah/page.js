@@ -110,6 +110,41 @@ const ontarioPath = [
   },
 ];
 
+const mobileGuideOverview = [
+  {
+    number: '01',
+    title: 'Islamic Requirements',
+    items: ['Bride and groom consent', 'A wali for the bride', 'An agreed mahr', 'Muslim witnesses', 'An Imam or officiant'],
+  },
+  {
+    number: '02',
+    title: 'Ontario Legal Requirements',
+    items: ['Ontario marriage licence', 'Registered marriage officiant', 'Bring the licence on the wedding day', 'Legal paperwork filed after the ceremony', 'Marriage certificate ordered after registration'],
+  },
+  {
+    number: '03',
+    title: 'Trusted Imams and Vendors',
+    items: ['Recommendations coming soon'],
+  },
+];
+
+const mobileGuideLicenceSteps = [
+  ['Apply online', 'Apply for an Ontario marriage licence online or through your municipality.'],
+  ['Pick it up in person', 'Collect the licence from your municipality and bring the required identification.'],
+  ['Review the Nikah details', 'Confirm the date, time, location, and arrival time with your Imam.'],
+  ['Use a registered officiant', 'Choose an Imam or officiant who is registered to perform legal marriages in Ontario.'],
+  ['Bring the licence', 'Have the original marriage licence with you on the day of the Nikah.'],
+  ['Paperwork after the ceremony', 'The Imam completes and sends the legal marriage paperwork for registration.'],
+  ['Order the certificate', 'The couple orders the Ontario marriage certificate after registration. Allow about three to four months when the Registrar General is backlogged.'],
+];
+
+const mobileGuideRequirements = [
+  ['Consent of the bride and groom', 'Both the bride and groom must willingly agree to the marriage.'],
+  ['Wali for the bride', 'The wali may attend in person or online. Discuss alternate representation with the Imam in advance.'],
+  ['Mahr', 'Agree on the bridal gift and whether it will be given now, later, or in parts.'],
+  ['Muslim witnesses', 'Confirm the required Muslim witnesses and how they will attend before the ceremony day.'],
+];
+
 const marriageLicenceMunicipalities = [
   {
     region: 'Ontario and Toronto',
@@ -488,6 +523,75 @@ export default function NikahPage() {
             title="The Simple Nikkah Guide by Imam Zaniar Ahmad"
             loading="lazy"
           />
+        </div>
+        <div className="nikah-mobile-guide" aria-label="Mobile edition of The Simple Nikkah Guide">
+          <article className="nikah-mobile-guide__page">
+            <header>
+              <span>Page 1 of 3</span>
+              <h3>A Complete Overview</h3>
+            </header>
+            <div className="nikah-mobile-guide__overview">
+              {mobileGuideOverview.map((item) => (
+                <section key={item.title}>
+                  <b>{item.number}</b>
+                  <div>
+                    <h4>{item.title}</h4>
+                    <ul>
+                      {item.items.map((detail) => <li key={detail}>{detail}</li>)}
+                    </ul>
+                  </div>
+                </section>
+              ))}
+            </div>
+            <p className="nikah-mobile-guide__note">
+              <strong>Important:</strong> A Nikah alone is not automatically a legal marriage in Ontario. For one ceremony that is both religious and legal, use a registered marriage officiant.
+            </p>
+          </article>
+
+          <article className="nikah-mobile-guide__page">
+            <header>
+              <span>Page 2 of 3</span>
+              <h3>Get Your Ontario Marriage Licence</h3>
+            </header>
+            <ol className="nikah-mobile-guide__steps">
+              {mobileGuideLicenceSteps.map(([title, description], index) => (
+                <li key={title}>
+                  <b>{index + 1}</b>
+                  <div><h4>{title}</h4><p>{description}</p></div>
+                </li>
+              ))}
+            </ol>
+            <div className="nikah-mobile-guide__links">
+              <a href="https://www.ontario.ca/page/apply-marriage-licence-online" target="_blank" rel="noreferrer noopener">Apply for the marriage licence</a>
+              <a href="https://www.ontario.ca/page/how-get-copy-ontario-marriage-certificate-online" target="_blank" rel="noreferrer noopener">Order the marriage certificate</a>
+            </div>
+          </article>
+
+          <article className="nikah-mobile-guide__page">
+            <header>
+              <span>Page 3 of 3</span>
+              <h3>Complete the Islamic Nikah Requirements</h3>
+            </header>
+            <div className="nikah-mobile-guide__requirements">
+              {mobileGuideRequirements.map(([title, description], index) => (
+                <section key={title}>
+                  <b>{index + 1}</b>
+                  <div><h4>{title}</h4><p>{description}</p></div>
+                </section>
+              ))}
+            </div>
+            <div className="nikah-mobile-guide__checklist">
+              <h4>Bring on the day</h4>
+              <ul>
+                <li>Mahr details</li>
+                <li>Witness names</li>
+                <li>Marriage licence, if using legal officiation</li>
+                <li>Bride and groom names</li>
+                <li>Any required identification or forms</li>
+                <li>Wali contact or representation details</li>
+              </ul>
+            </div>
+          </article>
         </div>
         <p className="nikah-pdf-section__fallback">
           If the document viewer is unavailable on your device,{' '}
