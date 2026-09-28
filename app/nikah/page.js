@@ -145,6 +145,36 @@ const mobileGuideRequirements = [
   ['Muslim witnesses', 'Confirm the required Muslim witnesses and how they will attend before the ceremony day.'],
 ];
 
+const nikahExperiences = [
+  {
+    title: 'Home and Backyard Nikkah',
+    description: 'A warm, personal ceremony at a family home or thoughtfully prepared backyard setting.',
+    href: '/contact',
+    images: [
+      { src: '/images/venues/home-backyard-nikah-1.webp', alt: 'Elegant backyard Nikkah dinner and ceremony setting with lights and pink flowers' },
+      { src: '/images/venues/home-backyard-nikah-2.webp', alt: 'Outdoor backyard Nikkah reception tables beneath string lights' },
+    ],
+  },
+  {
+    title: 'Masjid Nikkah',
+    description: 'A dignified Islamic marriage ceremony in a familiar masjid setting with family and community.',
+    href: '/locations/mississauga-brampton',
+    images: [
+      { src: '/images/venues/isna-canada-mississauga-nikah-1.webp', alt: 'Floral Nikkah setup on the prayer carpet at ISNA Canada in Mississauga' },
+      { src: '/images/venues/isna-canada-mississauga-nikah-2.webp', alt: 'Floral wedding arch beneath the chandelier at ISNA Canada' },
+    ],
+  },
+  {
+    title: 'Banquet Hall Nikkah',
+    description: 'A coordinated ceremony designed to fit naturally into a larger wedding reception and venue schedule.',
+    href: '/locations/oakville-burlington-milton',
+    images: [
+      { src: '/images/venues/oakville-legacy-banquet-hall-nikah-1.webp', alt: 'Elegant floral Nikkah ceremony setting at Oakville Legacy' },
+      { src: '/images/venues/oakville-legacy-banquet-hall-nikah-2.webp', alt: 'Nikkah stage with arches and flowers at Oakville Legacy' },
+    ],
+  },
+];
+
 const marriageLicenceMunicipalities = [
   {
     region: 'Ontario and Toronto',
@@ -497,6 +527,44 @@ export default function NikahPage() {
           <li><span><Icon name="calendar" /></span><div><strong>Confirm Availability</strong><p>Review the timing, location, and travel details.</p></div></li>
           <li><span><Icon name="check" /></span><div><strong>Prepare Together</strong><p>Finalize the booking and ceremony requirements.</p></div></li>
         </ol>
+      </section>
+
+      <section className="nikah-experiences section section--compact" aria-labelledby="nikah-experiences-title">
+        <div className="section-heading section-heading--editorial">
+          <div>
+            <span className="eyebrow">Choose Your Setting</span>
+            <h2 id="nikah-experiences-title">Choose Your Nikkah Experience</h2>
+          </div>
+          <p className="section-lead">
+            Nikkah ceremonies can feel personal and meaningful in many settings.
+            These are real examples from a home, masjid, and banquet hall.
+          </p>
+        </div>
+        <div className="nikah-experiences__grid">
+          {nikahExperiences.map((experience) => (
+            <article className="nikah-experience-card" key={experience.title}>
+              <figure className="nikah-experience-card__photos">
+                {experience.images.map((image) => (
+                  <Image
+                    key={image.src}
+                    src={image.src}
+                    alt={image.alt}
+                    width={1200}
+                    height={1600}
+                    sizes="(max-width: 720px) 46vw, (max-width: 1100px) 23vw, 16vw"
+                  />
+                ))}
+              </figure>
+              <div className="nikah-experience-card__body">
+                <h3>{experience.title}</h3>
+                <p>{experience.description}</p>
+                <Link className="text-link" href={experience.href}>
+                  Explore this experience <span aria-hidden="true">&rarr;</span>
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="nikah-pdf-section" id="guide-preview">

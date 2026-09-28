@@ -131,15 +131,24 @@ export default function LocationPage({ params }) {
           <div className="venue-experience__grid">
             {location.venues.map((venue, venueIndex) => (
               <article className="venue-experience__card" key={venue.name}>
-                <figure className="venue-experience__photo">
+                <figure className={`venue-experience__photo${venue.secondaryImage ? ' venue-experience__photo--pair' : ''}`}>
                   <Image
                     src={venue.image}
                     alt={venue.alt}
                     width={venue.imageWidth}
                     height={venue.imageHeight}
-                    sizes="(max-width: 720px) 92vw, (max-width: 1100px) 46vw, 31vw"
+                    sizes={venue.secondaryImage ? '(max-width: 720px) 46vw, (max-width: 1100px) 23vw, 16vw' : '(max-width: 720px) 92vw, (max-width: 1100px) 46vw, 31vw'}
                     priority={venueIndex === 0}
                   />
+                  {venue.secondaryImage ? (
+                    <Image
+                      src={venue.secondaryImage}
+                      alt={venue.secondaryImageAlt}
+                      width={venue.secondaryImageWidth}
+                      height={venue.secondaryImageHeight}
+                      sizes="(max-width: 720px) 46vw, (max-width: 1100px) 23vw, 16vw"
+                    />
+                  ) : null}
                 </figure>
                 <div className="venue-experience__body">
                   <span className="venue-experience__city">{venue.city}</span>
