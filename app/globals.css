@@ -1558,6 +1558,23 @@ li + li {
   line-height: 1.65;
 }
 
+.hero__service-area {
+  max-width: 680px;
+  margin-top: 0.9rem;
+  color: rgba(255, 253, 248, 0.88);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.hero__travel-note {
+  max-width: 650px;
+  margin-top: 0.45rem;
+  color: rgba(255, 253, 248, 0.7);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
 .hero-actions,
 .content-actions,
 .review-actions {

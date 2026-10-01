@@ -8,10 +8,11 @@ import { buildMetadata } from '../lib/metadata';
 import { siteContent } from '../lib/site-content';
 
 export const metadata = buildMetadata({
-  title: 'Nikah Imam in Toronto and the GTA',
+  title: 'Ontario Nikah Imam | Toronto, Mississauga, Hamilton & Niagara',
   description:
-    'Book Imam Zaniar Ahmad for a religious Nikah, Ontario legal marriage officiation, or both across Toronto, the GTA, and Southern Ontario.',
+    'Book Imam Zaniar Ahmad for Nikah ceremonies and legal marriage registration in Toronto, Mississauga, Hamilton, Niagara Falls and nearby Ontario cities.',
   path: '/',
+  absoluteTitle: true,
 });
 
 const nikahOptions = [
@@ -47,14 +48,19 @@ export default function Home() {
       <section className="hero hero--home">
         <div className="hero__copy">
           <span className="eyebrow eyebrow--light">Imam Zaniar Ahmad</span>
-          <h1>
-            Nikah Imam in Ontario | Islamic Marriage Officiant for Toronto, GTA
-            &amp; Southern Ontario
-          </h1>
-          <p className="hero__tagline">A Meaningful Beginning, Held with Care</p>
+          <h1>Nikah Imam for Weddings Across Ontario</h1>
           <p className="hero__lead">
-            Religious Nikah ceremonies, Ontario legal marriage officiation, and
-            thoughtful speaking engagements for Muslim communities.
+            Religious Nikah ceremonies and Ontario legal marriage officiation,
+            thoughtfully coordinated for your wedding day.
+          </p>
+          <p className="hero__service-area">
+            Serving Toronto, Mississauga, Brampton, Oakville, Milton,
+            Burlington, Hamilton, Niagara Falls, and surrounding Ontario
+            communities.
+          </p>
+          <p className="hero__travel-note">
+            Available for ceremonies at masjids, banquet halls, community
+            centres, private homes, and wedding venues across Ontario.
           </p>
 
           <div className="hero-actions">
@@ -64,8 +70,8 @@ export default function Home() {
             >
               Book a Nikah
             </Link>
-            <Link className="button button--gold" href="/lectures">
-              Explore Lectures &amp; Fundraising
+            <Link className="button button--gold" href="/nikah">
+              Explore Nikah Services
             </Link>
           </div>
           <p className="hero-response-note">
@@ -78,9 +84,6 @@ export default function Home() {
             <Link href="/nikah#guide-preview">
               Get The Simple Nikkah Guide <span aria-hidden="true">&rarr;</span>
             </Link>
-            <a href={siteContent.contact.phoneHref}>
-              Call for Lectures or Fundraising
-            </a>
           </div>
         </div>
 
