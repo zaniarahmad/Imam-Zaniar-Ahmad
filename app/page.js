@@ -81,8 +81,12 @@ export default function Home() {
           </p>
 
           <div className="hero__secondary-actions">
-            <Link href="/nikah#guide-preview">
-              Get The Simple Nikkah Guide <span aria-hidden="true">&rarr;</span>
+            <Link className="hero-guide-cta" href="/nikah#guide-preview">
+              <span>
+                <small>Free wedding resource</small>
+                Get The Simple Nikkah Guide
+              </span>
+              <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
         </div>
