@@ -66,6 +66,21 @@ export default function Home() {
               Explore Nikah Services
             </Link>
           </div>
+          <p className="hero-response-note">
+            <Icon name="clock" />
+            <strong>{siteContent.contact.nikahResponseTime}</strong>
+            <span>after using the Nikah form on the Contact page</span>
+          </p>
+
+          <div className="hero__secondary-actions">
+            <Link className="hero-guide-cta" href="/nikah#guide-preview">
+              <span>
+                <small>Free wedding resource</small>
+                Get The Simple Nikkah Guide
+              </span>
+              <span aria-hidden="true">&rarr;</span>
+            </Link>
+          </div>
         </div>
 
         <div className="hero__visual">
