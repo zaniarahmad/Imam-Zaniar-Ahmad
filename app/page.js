@@ -10,7 +10,7 @@ import { siteContent } from '../lib/site-content';
 export const metadata = buildMetadata({
   title: 'Ontario Nikah Imam | Toronto, Mississauga, Hamilton & Niagara',
   description:
-    'Book Imam Zaniar Ahmad for Nikah ceremonies and legal marriage registration in Toronto, Mississauga, Hamilton, Niagara Falls and nearby Ontario cities.',
+    'Book Imam Zaniar Ahmad for religious Nikah ceremonies and legal Ontario marriage officiation in Toronto, Mississauga, Hamilton, Niagara Falls, and the GTA.',
   path: '/',
   absoluteTitle: true,
 });
@@ -48,19 +48,11 @@ export default function Home() {
       <section className="hero hero--home">
         <div className="hero__copy">
           <span className="eyebrow eyebrow--light">Imam Zaniar Ahmad</span>
-          <h1>Nikah Imam for Weddings Across Ontario</h1>
+          <h1>Nikah Imam Serving Toronto to Niagara</h1>
           <p className="hero__lead">
-            Religious Nikah ceremonies and Ontario legal marriage officiation,
-            thoughtfully coordinated for your wedding day.
-          </p>
-          <p className="hero__service-area">
-            Serving Toronto, Mississauga, Brampton, Oakville, Milton,
-            Burlington, Hamilton, Niagara Falls, and surrounding Ontario
+            Religious Nikah ceremonies and legal Ontario marriage officiation
+            in Toronto, Mississauga, Hamilton, Niagara Falls, and nearby
             communities.
-          </p>
-          <p className="hero__travel-note">
-            Available for ceremonies at masjids, banquet halls, community
-            centres, private homes, and wedding venues across Ontario.
           </p>
 
           <div className="hero-actions">
@@ -72,21 +64,6 @@ export default function Home() {
             </Link>
             <Link className="button button--gold" href="/nikah">
               Explore Nikah Services
-            </Link>
-          </div>
-          <p className="hero-response-note">
-            <Icon name="clock" />
-            <strong>{siteContent.contact.nikahResponseTime}</strong>
-            <span>after using the Nikah form on the Contact page</span>
-          </p>
-
-          <div className="hero__secondary-actions">
-            <Link className="hero-guide-cta" href="/nikah#guide-preview">
-              <span>
-                <small>Free wedding resource</small>
-                Get The Simple Nikkah Guide
-              </span>
-              <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
         </div>
