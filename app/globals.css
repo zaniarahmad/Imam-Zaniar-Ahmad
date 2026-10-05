@@ -1653,6 +1653,8 @@ li + li {
   color: rgba(223, 184, 103, 0.82);
   text-align: right;
   text-shadow: 0 1px 18px rgba(197, 161, 90, 0.12);
+  transform: scale(1.18);
+  transform-origin: right bottom;
 }
 
 .hero__acceptance-arabic,
@@ -3125,6 +3127,7 @@ li + li {
     justify-items: center;
     margin: 0 0 1.2rem;
     text-align: center;
+    transform-origin: center bottom;
   }
 
   .hero__credentials {
