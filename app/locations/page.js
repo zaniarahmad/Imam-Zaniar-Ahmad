@@ -39,7 +39,7 @@ export default function LocationsPage() {
               <h2>{location.region}</h2>
               <p>{location.description}</p>
               <Link className="text-link" href={`/locations/${location.slug}`}>
-                View local Nikah services <span aria-hidden="true">&rarr;</span>
+                {location.linkLabel || `Nikah imam in ${location.region}`} <span aria-hidden="true">&rarr;</span>
               </Link>
             </article>
           ))}

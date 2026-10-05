@@ -8,7 +8,7 @@ import { buildMetadata } from '../lib/metadata';
 import { siteContent } from '../lib/site-content';
 
 export const metadata = buildMetadata({
-  title: 'Ontario Nikah Imam | Toronto, Mississauga, Hamilton & Niagara',
+  title: 'Nikah Imam Ontario | Toronto, Mississauga & Niagara',
   description:
     'Book Imam Zaniar Ahmad for religious Nikah ceremonies and legal Ontario marriage officiation in Toronto, Mississauga, Hamilton, Niagara Falls, and the GTA.',
   path: '/',
@@ -64,6 +64,9 @@ export default function Home() {
             </Link>
             <Link className="button button--gold" href="/nikah">
               Explore Nikah Services
+            </Link>
+            <Link className="button button--outline-light" href="/lectures">
+              Speaking &amp; Fundraising
             </Link>
           </div>
           <p className="hero-response-note">

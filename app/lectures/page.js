@@ -149,7 +149,7 @@ const fundraisingServices = [
 ];
 
 export const metadata = buildMetadata({
-  title: 'Islamic Speaker and Fundraiser in Ontario',
+  title: 'Islamic Speaker & Fundraiser in Ontario',
   description:
     'Invite Imam Zaniar Ahmad for Islamic lectures, conference keynotes, podcasts, technology talks, mosque fundraising, and Muslim community events.',
   path: '/lectures',

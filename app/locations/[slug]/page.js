@@ -18,9 +18,10 @@ export function generateMetadata({ params }) {
   }
 
   return buildMetadata({
-    title: location.title,
+    title: location.seoTitle || location.title,
     description: location.description,
     path: `/locations/${location.slug}`,
+    absoluteTitle: location.absoluteSeoTitle || false,
   });
 }
 
@@ -30,6 +31,19 @@ export default function LocationPage({ params }) {
   if (!location) notFound();
 
   const pageUrl = `${siteContent.siteUrl}/locations/${location.slug}`;
+  const faqSchema = location.faqs?.length
+    ? {
+        '@type': 'FAQPage',
+        mainEntity: location.faqs.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer,
+          },
+        })),
+      }
+    : null;
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -51,6 +65,7 @@ export default function LocationPage({ params }) {
         serviceType: 'Religious Nikah and Ontario marriage officiation',
         areaServed: location.areas.map((name) => ({ '@type': 'City', name })),
       },
+      ...(faqSchema ? [faqSchema] : []),
     ],
   };
 
@@ -177,6 +192,25 @@ export default function LocationPage({ params }) {
           <p className="venue-experience__note">
             Venue names identify past ceremony locations and do not imply sponsorship or endorsement. Reviews shown are from Imam Zaniar Ahmad&apos;s Google Business Profile.
           </p>
+        </section>
+      ) : null}
+
+      {location.faqs?.length ? (
+        <section className="section section--muted section--compact" aria-labelledby="local-faq-title">
+          <div className="section-heading section-heading--editorial">
+            <div>
+              <span className="eyebrow">Mississauga Nikah FAQ</span>
+              <h2 id="local-faq-title">Common Questions from Peel Region Couples</h2>
+            </div>
+          </div>
+          <div className="card-grid card-grid--three">
+            {location.faqs.map((item) => (
+              <article className="service-card" key={item.question}>
+                <h3>{item.question}</h3>
+                <p>{item.answer}</p>
+              </article>
+            ))}
+          </div>
         </section>
       ) : null}
 

@@ -68,7 +68,7 @@ export default function OntarioServiceMap({ compact = false }) {
               <h3>{group.region}</h3>
               <p>{group.areas.join(' \u00b7 ')}</p>
               <Link className="service-map__region-link" href={group.href}>
-                Local Nikah services <span aria-hidden="true">&rarr;</span>
+                {group.linkLabel} <span aria-hidden="true">&rarr;</span>
               </Link>
             </div>
             <span className="service-map__city-count">

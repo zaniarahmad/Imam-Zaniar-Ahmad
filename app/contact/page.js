@@ -191,7 +191,7 @@ export default function ContactPage() {
         />
         <div className="certificate-modal__panel">
           <div className="certificate-modal__top">
-            <h2 id="certificate-modal-title">Free Nikkah Nama Islamic Certificate</h2>
+            <h2 id="certificate-modal-title">Certificate Preview</h2>
             <a
               className="certificate-modal__close"
               href="#nikkah-certificate"
