@@ -58,6 +58,13 @@ const serviceJsonLd = {
 
 const speakingServices = [
   {
+    href: '/workshops',
+    icon: 'book',
+    title: 'Workshops and Courses',
+    description:
+      'Zakah, money, marriage, and dua workshops for masajid, schools, and organizations.',
+  },
+  {
     href: '#lectures',
     icon: 'microphone',
     title: 'Islamic Lectures',

@@ -3691,6 +3691,202 @@ li + li {
   object-position: center 24%;
 }
 
+/* Workshops */
+.workshops-hero__media img {
+  object-position: center 24%;
+}
+
+.workshop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.workshop-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 390px;
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  border: 1px solid rgba(31, 58, 49, 0.14);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 20px 55px rgba(31, 58, 49, 0.07);
+}
+
+.workshop-card--featured {
+  position: relative;
+  grid-column: 1 / -1;
+  min-height: 430px;
+  padding-right: min(48%, 34rem);
+  border-color: rgba(197, 161, 90, 0.72);
+  background:
+    radial-gradient(circle at 88% 48%, rgba(197, 161, 90, 0.22), transparent 19rem),
+    linear-gradient(135deg, #fffdf8, #eef3e9);
+  box-shadow: 0 28px 70px rgba(31, 58, 49, 0.13);
+}
+
+.workshop-card__topline {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.workshop-card__badge {
+  display: inline-flex;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  background: var(--brass);
+  color: var(--forest);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.workshop-card__zakah-logo {
+  width: 215px;
+  height: auto;
+  margin: 1.5rem 0 0.2rem;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.workshop-card--featured .workshop-card__zakah-logo {
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  width: min(32%, 360px);
+  margin: 0;
+  transform: translateY(-50%);
+  filter: drop-shadow(0 18px 28px rgba(31, 58, 49, 0.12));
+}
+
+.workshop-card h3 {
+  max-width: 23ch;
+  margin: 1.2rem 0 0.75rem;
+  font-size: clamp(1.65rem, 2.6vw, 2.45rem);
+}
+
+.workshop-card > p {
+  max-width: 48rem;
+  color: var(--muted);
+}
+
+.workshop-card__audience {
+  display: grid;
+  gap: 0.2rem;
+  margin: auto 0 1.25rem;
+  padding-top: 1.25rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.workshop-card__audience strong {
+  color: var(--forest);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.workshop-zakah-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(240px, 0.6fr);
+  gap: 2rem;
+  align-items: center;
+  margin: 1.5rem 0;
+  padding: clamp(2rem, 6vw, 5rem);
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at 95% 0, rgba(197, 161, 90, 0.27), transparent 22rem),
+    var(--forest);
+  color: var(--paper);
+  box-shadow: var(--shadow-deep);
+}
+
+.workshop-zakah-feature__copy h2 {
+  max-width: 18ch;
+  color: var(--paper);
+}
+
+.workshop-zakah-feature__copy p {
+  max-width: 44rem;
+  color: rgba(255, 253, 248, 0.76);
+}
+
+.workshop-zakah-feature__copy .button {
+  margin-top: 1rem;
+}
+
+.workshop-zakah-feature__mark {
+  display: grid;
+  place-items: center;
+}
+
+.workshop-zakah-feature__mark img {
+  width: min(100%, 270px);
+  height: auto;
+  filter: drop-shadow(0 24px 45px rgba(0, 0, 0, 0.24));
+}
+
+.workshop-booking-cta__icon {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle, rgba(197, 161, 90, 0.28), transparent 55%),
+    rgba(255, 255, 255, 0.04);
+}
+
+.workshop-booking-cta__icon .icon {
+  width: clamp(8rem, 18vw, 14rem);
+  height: clamp(8rem, 18vw, 14rem);
+  color: var(--brass);
+  stroke-width: 0.7;
+}
+
+@media (max-width: 900px) {
+  .workshop-card--featured {
+    padding-right: clamp(1.5rem, 3.5vw, 2.5rem);
+  }
+
+  .workshop-card--featured .workshop-card__zakah-logo {
+    position: static;
+    width: 215px;
+    margin: 1.5rem 0 0.2rem;
+    transform: none;
+  }
+
+  .workshop-zakah-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .workshop-zakah-feature__mark img {
+    width: min(52vw, 230px);
+  }
+}
+
+@media (max-width: 620px) {
+  .workshop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workshop-card--featured {
+    grid-column: auto;
+  }
+
+  .workshop-card {
+    min-height: 0;
+    border-radius: 22px;
+  }
+
+  .workshop-zakah-feature {
+    border-radius: 26px;
+  }
+}
+
 /* Media kit */
 .media-kit-hero {
   max-width: 920px;

@@ -16,8 +16,8 @@ const manrope = Manrope({
 const primaryLinks = [
   { href: '/nikah', label: 'Nikah' },
   { href: '/lectures', label: 'Lectures' },
+  { href: '/workshops', label: 'Workshops' },
   { href: '/about', label: 'About' },
-  { href: '/projects', label: 'Projects' },
   { href: '/testimonials', label: 'Testimonials' },
   { href: '/media', label: 'Press Kit' },
   { href: '/blog', label: 'Blog' },

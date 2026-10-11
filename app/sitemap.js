@@ -7,6 +7,7 @@ export default function sitemap() {
     { path: '/nikah', lastModified: '2026-10-10' },
     { path: '/locations', lastModified: '2026-09-24' },
     { path: '/lectures', lastModified: '2026-09-22' },
+    { path: '/workshops', lastModified: '2026-10-11' },
     { path: '/testimonials', lastModified: '2026-09-22' },
     { path: '/projects', lastModified: '2026-07-27' },
     { path: '/media', lastModified: '2026-10-11' },
