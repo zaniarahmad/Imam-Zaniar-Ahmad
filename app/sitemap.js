@@ -9,6 +9,7 @@ export default function sitemap() {
     { path: '/lectures', lastModified: '2026-09-22' },
     { path: '/testimonials', lastModified: '2026-09-22' },
     { path: '/projects', lastModified: '2026-07-27' },
+    { path: '/media', lastModified: '2026-10-11' },
     { path: '/blog', lastModified: '2026-09-22' },
     { path: '/contact', lastModified: '2026-09-22' },
     { path: '/privacy', lastModified: '2026-07-27' },

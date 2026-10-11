@@ -3691,6 +3691,124 @@ li + li {
   object-position: center 24%;
 }
 
+/* Media kit */
+.media-kit-hero {
+  max-width: 920px;
+}
+
+.media-download-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+
+.media-download-card {
+  overflow: hidden;
+  border: 1px solid rgba(31, 58, 49, 0.14);
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 20px 55px rgba(31, 58, 49, 0.08);
+}
+
+.media-download-card--featured {
+  border-color: rgba(195, 160, 92, 0.72);
+  box-shadow: 0 24px 65px rgba(31, 58, 49, 0.13);
+}
+
+.media-download-card__image {
+  margin: 0;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.media-download-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+}
+
+.media-download-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 1.35rem;
+}
+
+.media-download-card__body h3,
+.media-download-card__body p {
+  margin: 0;
+}
+
+.media-download-card__body p {
+  color: var(--muted);
+}
+
+.media-download-card__details {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.media-download-card__body .button {
+  width: 100%;
+  margin-top: auto;
+  justify-content: space-between;
+}
+
+.media-usage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.8fr);
+  gap: 2rem;
+  align-items: center;
+  border-radius: 32px;
+}
+
+.media-usage__copy h2,
+.media-usage__contact h3 {
+  margin-bottom: 0.7rem;
+}
+
+.media-usage__copy p,
+.media-usage__contact p {
+  color: var(--muted);
+}
+
+.media-usage__contact {
+  padding: 1.4rem;
+  border: 1px solid rgba(31, 58, 49, 0.14);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 900px) {
+  .media-download-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .media-usage {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .media-download-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .media-download-card {
+    border-radius: 22px;
+  }
+
+  .media-download-card__image {
+    aspect-ratio: 0.88;
+  }
+}
+
 .review-wall {
   margin: 0 0 clamp(3rem, 6vw, 5.5rem);
   padding: clamp(1.1rem, 2.3vw, 2rem);
