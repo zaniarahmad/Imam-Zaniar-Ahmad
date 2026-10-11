@@ -356,10 +356,11 @@ const pageJsonLd = {
 };
 
 export const metadata = buildMetadata({
-  title: 'Nikah and Ontario Marriage Officiation',
+  title: 'Nikah Imam Ontario | Muslim Marriage Officiant',
   description:
-    'Book Imam Zaniar Ahmad for a religious Nikah, Ontario legal marriage officiation, or both, and use the free Muslim wedding planning guide.',
+    'Book a Nikah imam and registered Ontario marriage officiant for a Muslim wedding ceremony in Toronto, Mississauga, Hamilton, Niagara, and nearby cities.',
   path: '/nikah',
+  absoluteTitle: true,
 });
 
 export default function NikahPage() {
@@ -376,11 +377,11 @@ export default function NikahPage() {
 
       <section className="page-hero nikah-money-page__hero">
         <span className="eyebrow">Nikah Services and Wedding Planning</span>
-        <h1>Nikah Imam and Islamic Marriage Officiant in Ontario</h1>
+        <h1>Nikah Imam and Muslim Marriage Officiant in Ontario</h1>
         <p className="section-lead">
           Book a religious Nikah ceremony, Ontario legal marriage officiation,
-          or both, then use the free guide to prepare for the ceremony with
-          confidence.
+          or both for your Muslim wedding, then use the free guide to prepare
+          with confidence.
         </p>
         <div className="content-actions">
           <Link
@@ -497,8 +498,12 @@ export default function NikahPage() {
             <h2>Where Imam Zaniar Serves</h2>
           </div>
           <p className="section-lead">
-            Available across Southern Ontario. Nikah ceremonies outside Ontario
-            are available by request with additional travel fees.
+            Book a Nikah imam in{' '}
+            <Link href="/locations/mississauga-brampton">Mississauga and Brampton</Link>,{' '}
+            <Link href="/locations/toronto-gta">Toronto and the GTA</Link>,{' '}
+            <Link href="/locations/hamilton-niagara">Hamilton and Niagara</Link>,
+            and other Ontario communities. Ceremonies outside Ontario are
+            available by request with additional travel fees.
           </p>
         </div>
         <OntarioServiceMap compact />
