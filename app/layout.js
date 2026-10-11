@@ -19,7 +19,7 @@ const primaryLinks = [
   { href: '/about', label: 'About' },
   { href: '/projects', label: 'Projects' },
   { href: '/testimonials', label: 'Testimonials' },
-  { href: '/media', label: 'Media' },
+  { href: '/media', label: 'Press Kit' },
   { href: '/blog', label: 'Blog' },
 ];
 
