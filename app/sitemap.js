@@ -4,7 +4,7 @@ export default function sitemap() {
   const routes = [
     { path: '/', lastModified: '2026-09-22' },
     { path: '/about', lastModified: '2026-09-22' },
-    { path: '/nikah', lastModified: '2026-09-24' },
+    { path: '/nikah', lastModified: '2026-10-10' },
     { path: '/locations', lastModified: '2026-09-24' },
     { path: '/lectures', lastModified: '2026-09-22' },
     { path: '/testimonials', lastModified: '2026-09-22' },
@@ -27,7 +27,7 @@ export default function sitemap() {
 
   const locationUrls = siteContent.locationPages.map((location) => ({
     url: `${siteContent.siteUrl}/locations/${location.slug}`,
-    lastModified: new Date('2026-09-24'),
+    lastModified: new Date(location.updated || '2026-09-24'),
   }));
 
   return [...staticUrls, ...locationUrls, ...blogUrls];
