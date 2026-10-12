@@ -20,7 +20,7 @@ export default function BlogIndexPage() {
           <span className="eyebrow">Blog</span>
           <h1>Practical Guidance for Couples and Communities</h1>
           <p className="section-lead">
-            Clear, useful articles about preparing for a Nikah, inviting a speaker,
+            Clear, sourced guidance about Nikah, mahr, Islamic marriage, money,
             and serving Muslim communities with intention.
           </p>
         </div>
@@ -42,20 +42,27 @@ export default function BlogIndexPage() {
           {siteContent.blogPosts.map((post, index) => (
             <article key={post.slug} className="blog-card">
               <Image
-                src={[siteContent.photos.withGroom, siteContent.photos.communityEvent][index]}
-                alt={index === 0 ? 'Imam Zaniar Ahmad with a groom at a Nikah' : 'Imam Zaniar Ahmad at a community event'}
-                width={index === 0 ? 1206 : 1448}
-                height={index === 0 ? 1494 : 1086}
+                src={post.coverImage}
+                alt={post.coverAlt}
+                width={post.coverWidth}
+                height={post.coverHeight}
                 sizes="(max-width: 820px) 92vw, 44vw"
               />
               <div className="blog-card__copy">
-                <p className="card-meta"><Icon name="calendar" />{post.date}</p>
+                <p className="card-meta">
+                  <Icon name="calendar" />
+                  {new Intl.DateTimeFormat('en-CA', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    timeZone: 'UTC',
+                  }).format(new Date(post.date))}
+                  <span aria-hidden="true">·</span> {post.readTime}
+                </p>
                 <h3>{post.title}</h3>
                 <p>{post.excerpt}</p>
                 <Link className="text-link" href={`/blog/${post.slug}`}>
-                  {index === 0
-                    ? 'Read the Ontario Nikkah preparation guide'
-                    : 'Read how to invite Imam Zaniar to speak'}{' '}
+                  Read article{' '}
                   <span aria-hidden="true">&rarr;</span>
                 </Link>
               </div>
