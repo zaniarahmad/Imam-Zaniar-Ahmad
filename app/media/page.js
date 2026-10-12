@@ -81,6 +81,20 @@ const mediaPhotos = [
     alt: 'Imam Zaniar Ahmad seated in a studio with a podcast microphone and camera',
     orientation: 'landscape',
   },
+  {
+    title: 'Transparent Headshot PNG',
+    label: 'Ready for posters and graphics',
+    description: 'A background-free head-and-shoulders cutout that designers can place directly onto event posters, speaker cards, and social media graphics.',
+    preview: '/downloads/media/imam-zaniar-ahmad-transparent-headshot.png',
+    download: '/downloads/media/imam-zaniar-ahmad-transparent-headshot.png',
+    filename: 'imam-zaniar-ahmad-transparent-headshot.png',
+    width: 1024,
+    height: 1536,
+    size: '1024 × 1536 transparent PNG · 1.9 MB',
+    alt: 'Background-free headshot of Imam Zaniar Ahmad for event posters',
+    orientation: 'cutout',
+    downloadLabel: 'Download Transparent PNG',
+  },
 ];
 
 export const metadata = buildMetadata({
@@ -152,7 +166,7 @@ export default function MediaPage() {
         <div className="media-download-grid">
           {mediaPhotos.map((photo, index) => (
             <article
-              className={`media-download-card${index === 0 ? ' media-download-card--featured' : ''}${photo.orientation === 'landscape' ? ' media-download-card--landscape' : ''}`}
+              className={`media-download-card${index === 0 ? ' media-download-card--featured' : ''}${photo.orientation === 'landscape' ? ' media-download-card--landscape' : ''}${photo.orientation === 'cutout' ? ' media-download-card--cutout' : ''}`}
               key={photo.title}
             >
               <figure className="media-download-card__image">
@@ -171,7 +185,7 @@ export default function MediaPage() {
                 <p>{photo.description}</p>
                 <span className="media-download-card__details">{photo.size}</span>
                 <a className="button button--primary" href={photo.download} download={photo.filename}>
-                  Download JPG <span aria-hidden="true">↓</span>
+                  {photo.downloadLabel || 'Download JPG'} <span aria-hidden="true">↓</span>
                 </a>
               </div>
             </article>

@@ -3964,6 +3964,38 @@ li + li {
   object-position: center;
 }
 
+.media-download-card--cutout {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+}
+
+.media-download-card--cutout .media-download-card__image {
+  aspect-ratio: 4 / 5;
+  background-color: #f3efe5;
+  background-image:
+    linear-gradient(45deg, rgba(31, 58, 49, 0.055) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(31, 58, 49, 0.055) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(31, 58, 49, 0.055) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(31, 58, 49, 0.055) 75%);
+  background-position: 0 0, 0 14px, 14px -14px, -14px 0;
+  background-size: 28px 28px;
+}
+
+.media-download-card--cutout .media-download-card__image img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.media-download-card--cutout .media-download-card__body {
+  justify-content: center;
+  padding: clamp(1.5rem, 4vw, 3.25rem);
+}
+
+.media-download-card--cutout .media-download-card__body h3 {
+  font-size: clamp(1.65rem, 3vw, 2.5rem);
+}
+
 .media-download-card__body {
   display: flex;
   flex-direction: column;
@@ -4054,6 +4086,14 @@ li + li {
 
   .media-download-card--landscape .media-download-card__image {
     aspect-ratio: 3 / 2;
+  }
+
+  .media-download-card--cutout {
+    display: block;
+  }
+
+  .media-download-card--cutout .media-download-card__image {
+    aspect-ratio: 4 / 5;
   }
 }
 
