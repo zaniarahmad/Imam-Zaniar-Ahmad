@@ -1,9 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import CopyTextButton from '../components/copy-text-button';
 import Icon from '../components/ui-icon';
 import { buildMetadata } from '../../lib/metadata';
 import { siteContent } from '../../lib/site-content';
+
+const standardBio =
+  'Imam Zaniar Ahmad is a Canadian Islamic speaker, registered Ontario marriage officiant, fundraiser, and community technology entrepreneur. He studied Arabic and Islamic Studies at the University of Madinah and Quran and Chaplaincy at the College of Masjid Nabawi, and holds an MBA in Entrepreneurship. He performs Nikah ceremonies across Ontario, delivers khutbahs, lectures, and workshops, and supports Muslim organizations through fundraising. He is also a co-founder of Zakah.com, the most detailed Zakah calculator and a fundraising platform that has raised millions of dollars for non-profits. He is also a co-founder of AutoAjr, an initiative that makes charitable giving easier to access. His approach is clear, practical, and light-hearted.';
+
+const shortBio =
+  'Imam Zaniar Ahmad is a Canadian Islamic speaker, registered Ontario marriage officiant, fundraiser, and community technology entrepreneur. He performs Nikah ceremonies across Ontario and delivers practical, engaging lectures and workshops. He is a co-founder of Zakah.com, the most detailed Zakah calculator and a fundraising platform that has raised millions of dollars for non-profits.';
 
 const mediaPhotos = [
   {
@@ -81,20 +88,6 @@ const mediaPhotos = [
     alt: 'Imam Zaniar Ahmad seated in a studio with a podcast microphone and camera',
     orientation: 'landscape',
   },
-  {
-    title: 'Transparent Headshot PNG',
-    label: 'Ready for posters and graphics',
-    description: 'A background-free head-and-shoulders cutout that designers can place directly onto event posters, speaker cards, and social media graphics.',
-    preview: '/downloads/media/imam-zaniar-ahmad-transparent-headshot.png',
-    download: '/downloads/media/imam-zaniar-ahmad-transparent-headshot.png',
-    filename: 'imam-zaniar-ahmad-transparent-headshot.png',
-    width: 1024,
-    height: 1536,
-    size: '1024 × 1536 transparent PNG · 1.9 MB',
-    alt: 'Background-free headshot of Imam Zaniar Ahmad for event posters',
-    orientation: 'cutout',
-    downloadLabel: 'Download Transparent PNG',
-  },
 ];
 
 export const metadata = buildMetadata({
@@ -108,13 +101,39 @@ export default function MediaPage() {
   return (
     <div className="page-shell media-kit-page">
       <section className="page-hero media-kit-hero">
-        <span className="eyebrow">For Event Organizers, Hosts, and Media</span>
-        <h1>Press and Media Kit</h1>
-        <p className="section-lead">
-          Use the approved biography and download high-resolution photos of Imam
-          Zaniar Ahmad for a confirmed event, program, article, podcast, or
-          community announcement.
-        </p>
+        <div className="media-kit-hero__copy">
+          <span className="eyebrow">For Event Organizers, Hosts, and Media</span>
+          <h1>Press and Media Kit</h1>
+          <p className="section-lead">
+            Use the approved biographies and download high-resolution photos of
+            Imam Zaniar Ahmad for a confirmed event, program, article, podcast,
+            or community announcement.
+          </p>
+        </div>
+        <aside className="media-kit-hero__asset" aria-label="Transparent headshot download">
+          <figure className="media-kit-hero__portrait">
+            <Image
+              src="/downloads/media/imam-zaniar-ahmad-transparent-headshot.png"
+              alt="Background-free headshot of Imam Zaniar Ahmad for event posters"
+              width={1024}
+              height={1536}
+              priority
+              sizes="(max-width: 900px) 84vw, 30vw"
+            />
+          </figure>
+          <div className="media-kit-hero__download">
+            <span className="card-meta">Poster-ready asset</span>
+            <h2>Transparent Headshot PNG</h2>
+            <p>Background-free and ready to place on event posters and speaker graphics.</p>
+            <a
+              className="button button--primary"
+              href="/downloads/media/imam-zaniar-ahmad-transparent-headshot.png"
+              download="imam-zaniar-ahmad-transparent-headshot.png"
+            >
+              Download Transparent PNG <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </aside>
       </section>
 
       <section className="section section--compact press-bio" aria-labelledby="approved-bio-title">
@@ -126,28 +145,29 @@ export default function MediaPage() {
             introductions, programs, articles, and media coverage.
           </p>
         </div>
-        <article className="press-bio__card">
-          <span className="card-meta">Approved short bio</span>
-          <p>
-            Imam Zaniar Ahmad is a Canadian Islamic speaker, registered Ontario
-            marriage officiant, fundraiser, and community technology entrepreneur.
-            He studied Arabic and Islamic Studies at the University of Madinah and
-            Quran and Chaplaincy at the College of Masjid Nabawi, and holds an MBA
-            in Entrepreneurship. He performs Nikah ceremonies across Ontario,
-            delivers khutbahs, lectures, and workshops, and supports Muslim
-            organizations through fundraising. He is also a co-founder of
-            Zakah.com, Meezan, and AutoAjr—initiatives that make Islamic services,
-            Zakah guidance, and charitable giving easier to access. His approach
-            is clear, practical, and light-hearted.
-          </p>
-          <a
-            className="button button--primary"
-            href="/downloads/media/imam-zaniar-ahmad-approved-bio.txt"
-            download="imam-zaniar-ahmad-approved-bio.txt"
-          >
-            Download Approved Bio <span aria-hidden="true">↓</span>
-          </a>
-        </article>
+        <div className="press-bio__options">
+          <article className="press-bio__card">
+            <span className="card-meta">Standard approved bio</span>
+            <p>{standardBio}</p>
+            <div className="press-bio__actions">
+              <CopyTextButton text={standardBio} label="Copy Standard Bio" />
+              <a
+                className="button button--primary"
+                href="/downloads/media/imam-zaniar-ahmad-approved-bio.txt"
+                download="imam-zaniar-ahmad-approved-bio.txt"
+              >
+                Download Both Bios <span aria-hidden="true">↓</span>
+              </a>
+            </div>
+          </article>
+          <article className="press-bio__card press-bio__card--short">
+            <span className="card-meta">Short approved bio</span>
+            <p>{shortBio}</p>
+            <div className="press-bio__actions">
+              <CopyTextButton text={shortBio} label="Copy Short Bio" />
+            </div>
+          </article>
+        </div>
       </section>
 
       <section className="section section--compact media-downloads" aria-labelledby="media-downloads-title">
@@ -166,7 +186,7 @@ export default function MediaPage() {
         <div className="media-download-grid">
           {mediaPhotos.map((photo, index) => (
             <article
-              className={`media-download-card${index === 0 ? ' media-download-card--featured' : ''}${photo.orientation === 'landscape' ? ' media-download-card--landscape' : ''}${photo.orientation === 'cutout' ? ' media-download-card--cutout' : ''}`}
+              className={`media-download-card${index === 0 ? ' media-download-card--featured' : ''}${photo.orientation === 'landscape' ? ' media-download-card--landscape' : ''}`}
               key={photo.title}
             >
               <figure className="media-download-card__image">
@@ -185,7 +205,7 @@ export default function MediaPage() {
                 <p>{photo.description}</p>
                 <span className="media-download-card__details">{photo.size}</span>
                 <a className="button button--primary" href={photo.download} download={photo.filename}>
-                  {photo.downloadLabel || 'Download JPG'} <span aria-hidden="true">↓</span>
+                  Download JPG <span aria-hidden="true">↓</span>
                 </a>
               </div>
             </article>
@@ -200,8 +220,7 @@ export default function MediaPage() {
           <p>
             These photos may be used to promote a confirmed appearance by Imam
             Zaniar Ahmad or for related editorial coverage. Please keep the image
-            recognizable, avoid filters that materially change its appearance,
-            and identify him as <strong>Imam Zaniar Ahmad</strong>.
+            recognizable and avoid filters that materially change its appearance.
           </p>
         </div>
         <div className="media-usage__contact">
