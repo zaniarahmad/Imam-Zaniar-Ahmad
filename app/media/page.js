@@ -115,8 +115,8 @@ export default function MediaPage() {
             <Image
               src="/downloads/media/imam-zaniar-ahmad-transparent-headshot.png"
               alt="Background-free headshot of Imam Zaniar Ahmad for event posters"
-              width={1024}
-              height={1536}
+              width={1374}
+              height={1145}
               priority
               sizes="(max-width: 900px) 84vw, 30vw"
             />
