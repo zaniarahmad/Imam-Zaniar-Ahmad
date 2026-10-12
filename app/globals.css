@@ -3965,11 +3965,6 @@ li + li {
   color: var(--muted);
 }
 
-.press-bio__options {
-  display: grid;
-  gap: 1.25rem;
-}
-
 .press-bio__card {
   padding: clamp(1.5rem, 4vw, 2.75rem);
   border: 1px solid rgba(31, 62, 51, 0.16);
@@ -3984,8 +3979,47 @@ li + li {
   line-height: 1.8;
 }
 
-.press-bio__card--short {
-  background: rgba(232, 224, 202, 0.42);
+.press-bio__tabs {
+  display: inline-flex;
+  gap: 0.3rem;
+  margin-bottom: 1.65rem;
+  padding: 0.3rem;
+  border: 1px solid rgba(31, 62, 51, 0.15);
+  border-radius: 999px;
+  background: rgba(232, 224, 202, 0.48);
+}
+
+.press-bio__tab {
+  min-height: 44px;
+  padding: 0.68rem 1.1rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.press-bio__tab:hover {
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.press-bio__tab:focus-visible {
+  outline: 3px solid rgba(197, 161, 90, 0.45);
+  outline-offset: 2px;
+}
+
+.press-bio__tabs .press-bio__tab--active,
+.press-bio__tabs .press-bio__tab--active:hover {
+  background: #15382d !important;
+  color: #fffdf8;
+  box-shadow: 0 8px 20px rgba(31, 58, 49, 0.17);
+}
+
+.press-bio__panel {
+  min-height: 20rem;
 }
 
 .press-bio__actions {
@@ -4123,6 +4157,16 @@ li + li {
 }
 
 @media (max-width: 620px) {
+  .press-bio__panel {
+    min-height: 0;
+  }
+
+  .press-bio__tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
   .media-download-grid {
     grid-template-columns: 1fr;
   }

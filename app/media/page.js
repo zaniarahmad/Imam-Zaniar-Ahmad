@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import CopyTextButton from '../components/copy-text-button';
+import BioTabs from '../components/bio-tabs';
 import Icon from '../components/ui-icon';
 import { buildMetadata } from '../../lib/metadata';
 import { siteContent } from '../../lib/site-content';
@@ -10,7 +10,7 @@ const standardBio =
   'Imam Zaniar Ahmad is a Canadian Islamic speaker, registered Ontario marriage officiant, fundraiser, and community technology entrepreneur. He studied Arabic and Islamic Studies at the University of Madinah and Quran and Chaplaincy at the College of Masjid Nabawi, and holds an MBA in Entrepreneurship. He performs Nikah ceremonies across Ontario, delivers khutbahs, lectures, and workshops, and supports Muslim organizations through fundraising. He is also a co-founder of Zakah.com, the most detailed Zakah calculator and a fundraising platform that has raised millions of dollars for non-profits. He is also a co-founder of AutoAjr, an initiative that makes charitable giving easier to access. His approach is clear, practical, and light-hearted.';
 
 const shortBio =
-  'Imam Zaniar Ahmad is a Canadian Islamic speaker, registered Ontario marriage officiant, fundraiser, and community technology entrepreneur. He performs Nikah ceremonies across Ontario and delivers practical, engaging lectures and workshops. He is a co-founder of Zakah.com, the most detailed Zakah calculator and a fundraising platform that has raised millions of dollars for non-profits.';
+  'Imam Zaniar Ahmad is a Canadian Islamic speaker and registered Ontario marriage officiant. He performs Nikah ceremonies and delivers practical lectures and workshops, and is a co-founder of Zakah.com, a detailed Zakah calculator and fundraising platform that has raised millions for non-profits.';
 
 const mediaPhotos = [
   {
@@ -145,29 +145,7 @@ export default function MediaPage() {
             introductions, programs, articles, and media coverage.
           </p>
         </div>
-        <div className="press-bio__options">
-          <article className="press-bio__card">
-            <span className="card-meta">Standard approved bio</span>
-            <p>{standardBio}</p>
-            <div className="press-bio__actions">
-              <CopyTextButton text={standardBio} label="Copy Standard Bio" />
-              <a
-                className="button button--primary"
-                href="/downloads/media/imam-zaniar-ahmad-approved-bio.txt"
-                download="imam-zaniar-ahmad-approved-bio.txt"
-              >
-                Download Both Bios <span aria-hidden="true">↓</span>
-              </a>
-            </div>
-          </article>
-          <article className="press-bio__card press-bio__card--short">
-            <span className="card-meta">Short approved bio</span>
-            <p>{shortBio}</p>
-            <div className="press-bio__actions">
-              <CopyTextButton text={shortBio} label="Copy Short Bio" />
-            </div>
-          </article>
-        </div>
+        <BioTabs longBio={standardBio} shortBio={shortBio} />
       </section>
 
       <section className="section section--compact media-downloads" aria-labelledby="media-downloads-title">
