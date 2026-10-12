@@ -42,6 +42,45 @@ const mediaPhotos = [
     size: '1066 × 1600 JPG · 333 KB',
     alt: 'Imam Zaniar Ahmad speaking with a microphone at an event',
   },
+  {
+    title: 'Studio Portrait — Copy Space Right',
+    label: 'Posters and event graphics',
+    description: 'A high-resolution studio portrait with open space on the right for event titles, dates, and organizer logos.',
+    preview: '/images/media/imam-zaniar-ahmad-studio-portrait-copy-space-right-preview.jpg',
+    download: '/downloads/media/imam-zaniar-ahmad-studio-portrait-copy-space-right.jpg',
+    filename: 'imam-zaniar-ahmad-studio-portrait-copy-space-right.jpg',
+    width: 5944,
+    height: 3963,
+    size: '5944 × 3963 JPG · 3.4 MB',
+    alt: 'Studio portrait of Imam Zaniar Ahmad seated with open space on the right',
+    orientation: 'landscape',
+  },
+  {
+    title: 'Studio Portrait — Copy Space Left',
+    label: 'Posters and event graphics',
+    description: 'A high-resolution studio portrait with open space on the left for headlines, event details, and branding.',
+    preview: '/images/media/imam-zaniar-ahmad-studio-portrait-copy-space-left-preview.jpg',
+    download: '/downloads/media/imam-zaniar-ahmad-studio-portrait-copy-space-left.jpg',
+    filename: 'imam-zaniar-ahmad-studio-portrait-copy-space-left.jpg',
+    width: 6000,
+    height: 4000,
+    size: '6000 × 4000 JPG · 3.9 MB',
+    alt: 'Studio portrait of Imam Zaniar Ahmad seated with open space on the left',
+    orientation: 'landscape',
+  },
+  {
+    title: 'Podcast and Media Photo',
+    label: 'Interviews and digital media',
+    description: 'A behind-the-scenes studio image for podcast announcements, interview promotion, and media features.',
+    preview: '/images/media/imam-zaniar-ahmad-podcast-media-photo-preview.jpg',
+    download: '/downloads/media/imam-zaniar-ahmad-podcast-media-photo.jpg',
+    filename: 'imam-zaniar-ahmad-podcast-media-photo.jpg',
+    width: 5217,
+    height: 3478,
+    size: '5217 × 3478 JPG · 3.7 MB',
+    alt: 'Imam Zaniar Ahmad seated in a studio with a podcast microphone and camera',
+    orientation: 'landscape',
+  },
 ];
 
 export const metadata = buildMetadata({
@@ -104,14 +143,18 @@ export default function MediaPage() {
             <h2 id="media-downloads-title">Choose the Photo That Fits Your Event</h2>
           </div>
           <p className="section-lead">
-            The professional headshot is the best default choice. Each button
-            downloads a print-ready JPG with a clear filename.
+            The professional headshot is the best default choice. The previews
+            are lightweight for fast browsing; each button downloads the
+            original high-resolution JPG with a clear filename.
           </p>
         </div>
 
         <div className="media-download-grid">
           {mediaPhotos.map((photo, index) => (
-            <article className={`media-download-card${index === 0 ? ' media-download-card--featured' : ''}`} key={photo.title}>
+            <article
+              className={`media-download-card${index === 0 ? ' media-download-card--featured' : ''}${photo.orientation === 'landscape' ? ' media-download-card--landscape' : ''}`}
+              key={photo.title}
+            >
               <figure className="media-download-card__image">
                 <Image
                   src={photo.preview}

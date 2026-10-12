@@ -3956,6 +3956,14 @@ li + li {
   object-position: center 22%;
 }
 
+.media-download-card--landscape .media-download-card__image {
+  aspect-ratio: 3 / 2;
+}
+
+.media-download-card--landscape .media-download-card__image img {
+  object-position: center;
+}
+
 .media-download-card__body {
   display: flex;
   flex-direction: column;
@@ -4042,6 +4050,10 @@ li + li {
 
   .media-download-card__image {
     aspect-ratio: 0.88;
+  }
+
+  .media-download-card--landscape .media-download-card__image {
+    aspect-ratio: 3 / 2;
   }
 }
 
