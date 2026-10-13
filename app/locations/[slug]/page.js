@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import ExpandableText from '../../components/expandable-text';
 import Icon from '../../components/ui-icon';
 import { buildMetadata } from '../../../lib/metadata';
 import { siteContent } from '../../../lib/site-content';
@@ -172,7 +173,7 @@ export default function LocationPage({ params }) {
                   {venue.thoughts ? (
                     <aside className="venue-experience__insight" aria-label={`Imam Zaniar's thoughts on ${venue.name}`}>
                       <span className="venue-experience__insight-label">Imam Zaniar&apos;s Take</span>
-                      <p>{venue.thoughts}</p>
+                      <ExpandableText>{venue.thoughts}</ExpandableText>
                       {venue.pros?.length || venue.considerations?.length ? (
                         <details className="venue-experience__insight-details">
                           <summary>View Pros &amp; Considerations</summary>
@@ -200,7 +201,7 @@ export default function LocationPage({ params }) {
                   ) : null}
                   <blockquote className="venue-experience__review">
                     <div className="venue-experience__stars" aria-label="5 out of 5 stars">★★★★★</div>
-                    <p>&ldquo;{venue.review.quote}&rdquo;</p>
+                    <ExpandableText>{`“${venue.review.quote}”`}</ExpandableText>
                     <footer>
                       <strong>{venue.review.name}</strong>
                       <span>{venue.review.context}</span>

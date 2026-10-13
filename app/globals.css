@@ -10567,6 +10567,38 @@ body {
   line-height: 1.55;
 }
 
+.expandable-copy__text--collapsed {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.expandable-copy__toggle {
+  display: inline-flex;
+  margin-top: 0.45rem;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  background: transparent;
+  color: var(--gold-dark);
+  font: inherit;
+  font-size: 0.7rem;
+  font-weight: 800;
+  line-height: 1.35;
+  cursor: pointer;
+}
+
+.expandable-copy__toggle:hover {
+  color: var(--forest);
+}
+
+.expandable-copy__toggle:focus-visible {
+  border-radius: 3px;
+  outline: 3px solid rgba(197, 161, 90, 0.4);
+  outline-offset: 4px;
+}
+
 .venue-experience__review footer {
   display: grid;
   gap: 0.2rem;
