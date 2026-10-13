@@ -4,8 +4,6 @@ import { useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Icon from './ui-icon';
-
 const dateFormatter = new Intl.DateTimeFormat('en-CA', {
   year: 'numeric',
   month: 'long',
@@ -59,17 +57,20 @@ export default function BlogFilter({ posts }) {
               sizes="(max-width: 820px) 92vw, 44vw"
             />
             <div className="blog-card__copy">
-              <span className="blog-card__category">{post.category}</span>
-              <p className="card-meta">
-                <Icon name="calendar" />
-                {dateFormatter.format(new Date(post.date))}
-                <span aria-hidden="true">·</span> {post.readTime}
-              </p>
+              <div className="blog-card__topline">
+                <span className="blog-card__category">{post.category}</span>
+                <span className="blog-card__read-time">{post.readTime}</span>
+              </div>
               <h2>{post.title}</h2>
               <p>{post.excerpt}</p>
-              <Link className="text-link" href={`/blog/${post.slug}`}>
-                Read article <span aria-hidden="true">&rarr;</span>
-              </Link>
+              <div className="blog-card__footer">
+                <Link className="text-link" href={`/blog/${post.slug}`}>
+                  Read article <span aria-hidden="true">&rarr;</span>
+                </Link>
+                <time dateTime={post.date} className="blog-card__date">
+                  {dateFormatter.format(new Date(post.date))}
+                </time>
+              </div>
             </div>
           </article>
         ))}
