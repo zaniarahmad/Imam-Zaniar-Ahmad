@@ -165,9 +165,9 @@ export default function WorkshopsPage() {
                 <strong>Designed for</strong>
                 <span>{workshop.audiences}</span>
               </div>
-              <a className="text-link" href={siteContent.contact.smsHref}>
+              <Link className="text-link" href="/contact">
                 Request this workshop <span aria-hidden="true">&rarr;</span>
-              </a>
+              </Link>
             </article>
           ))}
         </div>
