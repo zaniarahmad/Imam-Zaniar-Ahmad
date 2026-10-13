@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
+import BlogFilter from '../components/blog-filter';
 import Icon from '../components/ui-icon';
 import { buildMetadata } from '../../lib/metadata';
 import { siteContent } from '../../lib/site-content';
@@ -15,60 +15,13 @@ export const metadata = buildMetadata({
 export default function BlogIndexPage() {
   return (
     <div className="page-shell">
-      <section className="page-hero page-hero--with-media blog-hero">
-        <div className="page-hero__copy">
-          <span className="eyebrow">Blog</span>
-          <h1>Practical Guidance for Couples and Communities</h1>
-          <p className="section-lead">
-            Clear, sourced guidance about Nikah, mahr, Islamic marriage, money,
-            and serving Muslim communities with intention.
-          </p>
-        </div>
-        <figure className="page-hero__media page-hero__media--landscape">
-          <Image
-            src={siteContent.photos.signingNikah}
-            alt="Imam Zaniar Ahmad writing notes while preparing for a ceremony"
-            width={1365}
-            height={2048}
-            priority
-            sizes="(max-width: 820px) 92vw, 38vw"
-          />
-          <figcaption>Notes on faith, family, preparation, and service.</figcaption>
-        </figure>
+      <section className="blog-masthead">
+        <span className="blog-masthead__line" aria-hidden="true" />
+        <h1>Blog</h1>
       </section>
 
-      <section className="section section--compact">
-        <div className="card-grid">
-          {siteContent.blogPosts.map((post, index) => (
-            <article key={post.slug} className="blog-card">
-              <Image
-                src={post.coverImage}
-                alt={post.coverAlt}
-                width={post.coverWidth}
-                height={post.coverHeight}
-                sizes="(max-width: 820px) 92vw, 44vw"
-              />
-              <div className="blog-card__copy">
-                <p className="card-meta">
-                  <Icon name="calendar" />
-                  {new Intl.DateTimeFormat('en-CA', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                    timeZone: 'UTC',
-                  }).format(new Date(post.date))}
-                  <span aria-hidden="true">·</span> {post.readTime}
-                </p>
-                <h3>{post.title}</h3>
-                <p>{post.excerpt}</p>
-                <Link className="text-link" href={`/blog/${post.slug}`}>
-                  Read article{' '}
-                  <span aria-hidden="true">&rarr;</span>
-                </Link>
-              </div>
-            </article>
-          ))}
-        </div>
+      <section className="section blog-index-section">
+        <BlogFilter posts={siteContent.blogPosts} />
       </section>
 
       <section className="section section--muted section--compact">
