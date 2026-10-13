@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { Manrope } from 'next/font/google';
 import ActiveNavLink from './components/active-nav-link';
+import MobileNavigation from './components/mobile-navigation';
 import { siteContent, sitePathLinks } from '../lib/site-content';
 
 const manrope = Manrope({
@@ -155,33 +156,12 @@ gtag('config', ${JSON.stringify(ga4Id)}, { anonymize_ip: true });`}
               >
                 Book a Nikah
               </Link>
-              <details className="mobile-nav">
-                <summary aria-label="Open navigation">Menu</summary>
-                <nav className="mobile-nav__panel" aria-label="Mobile">
-                  {sitePathLinks
-                    .slice(1)
-                    .filter((link) => link.href !== '/contact')
-                    .map((link) => (
-                    <ActiveNavLink key={link.href} href={link.href}>
-                      {link.label}
-                    </ActiveNavLink>
-                  ))}
-                  <Link href="/contact">
-                    Book a Nikah
-                  </Link>
-                  <a href={siteContent.contact.phoneHref}>
-                    Call for Lectures or Fundraising
-                  </a>
-                  <a href={siteContent.contact.smsHref}>Send an SMS Text</a>
-                  <a
-                    href={siteContent.contact.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Learn More About Imam Zaniar
-                  </a>
-                </nav>
-              </details>
+              <MobileNavigation
+                links={primaryLinks}
+                phoneHref={siteContent.contact.phoneHref}
+                smsHref={siteContent.contact.smsHref}
+                instagramHref={siteContent.contact.instagram}
+              />
             </div>
           </div>
         </header>
