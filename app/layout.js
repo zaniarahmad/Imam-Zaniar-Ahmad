@@ -156,12 +156,7 @@ gtag('config', ${JSON.stringify(ga4Id)}, { anonymize_ip: true });`}
               >
                 Book a Nikah
               </Link>
-              <MobileNavigation
-                links={primaryLinks}
-                phoneHref={siteContent.contact.phoneHref}
-                smsHref={siteContent.contact.smsHref}
-                instagramHref={siteContent.contact.instagram}
-              />
+              <MobileNavigation links={primaryLinks} />
             </div>
           </div>
         </header>

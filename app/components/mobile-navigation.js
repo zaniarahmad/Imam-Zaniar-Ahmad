@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import ActiveNavLink from './active-nav-link';
 
-export default function MobileNavigation({ links, phoneHref, smsHref, instagramHref }) {
+export default function MobileNavigation({ links }) {
   const detailsRef = useRef(null);
   const pathname = usePathname();
 
@@ -59,11 +59,6 @@ export default function MobileNavigation({ links, phoneHref, smsHref, instagramH
           </ActiveNavLink>
         ))}
         <Link href="/contact">Book a Nikah</Link>
-        <a href={phoneHref}>Call for Lectures or Fundraising</a>
-        <a href={smsHref}>Send an SMS Text</a>
-        <a href={instagramHref} target="_blank" rel="noopener noreferrer">
-          Learn More About Imam Zaniar
-        </a>
       </nav>
     </details>
   );
