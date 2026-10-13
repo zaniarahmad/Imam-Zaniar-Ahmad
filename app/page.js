@@ -194,21 +194,21 @@ export default function Home() {
           <span className="eyebrow">About Imam Zaniar</span>
           <h2>A Mission Grounded in Faith and Service</h2>
           <p>
-            Imam Zaniar Ahmad serves Muslim communities at the meeting point of
-            faith, family, practical education, and technology. His work is
-            focused on making important religious services easier to understand
-            and access.
+            Imam Zaniar Ahmad is a Canadian Islamic speaker, registered Ontario
+            marriage officiant, fundraiser, and community technology entrepreneur.
+            He studied Arabic and Islamic Studies at the University of Madinah and
+            Quran and Chaplaincy at the College of Masjid Nabawi, and holds an MBA
+            in Entrepreneurship.
           </p>
           <p>
-            Alongside Nikah officiation, he speaks with students, families, and
-            community organizations about faith, responsible ambition, and
-            building a meaningful life without losing sight of Islamic values.
+            He performs Nikah ceremonies across Ontario, delivers khutbahs,
+            lectures, and workshops, and supports Muslim organizations through
+            fundraising. He is also a co-founder of Zakah.com, the most detailed
+            Zakah calculator and a fundraising platform that has raised millions
+            of dollars for non-profits. He is also a co-founder of AutoAjr, an
+            initiative that makes charitable giving easier to access. His approach
+            is clear, practical, and light-hearted.
           </p>
-          <ul className="mission-points">
-            {siteContent.biographyNotes.map((note) => (
-              <li key={note}><Icon name="check" />{note}</li>
-            ))}
-          </ul>
           <div className="content-actions">
             <Link className="button button--primary" href="/about">
               Learn About Imam Zaniar
