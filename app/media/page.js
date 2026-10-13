@@ -7,10 +7,10 @@ import { buildMetadata } from '../../lib/metadata';
 import { siteContent } from '../../lib/site-content';
 
 const standardBio =
-  'Imam Zaniar Ahmad is a Canadian Islamic speaker, registered Ontario marriage officiant, fundraiser, and community technology entrepreneur. He studied Arabic and Islamic Studies at the University of Madinah and Quran and Chaplaincy at the College of Masjid Nabawi, and holds an MBA in Entrepreneurship. He performs Nikah ceremonies across Ontario, delivers khutbahs, lectures, and workshops, and supports Muslim organizations through fundraising. He is also a co-founder of Zakah.com, the most detailed Zakah calculator and a fundraising platform that has raised millions of dollars for non-profits. He is also a co-founder of AutoAjr, an initiative that makes charitable giving easier to access. His approach is clear, practical, and light-hearted.';
+  'Imam Zaniar Ahmad is a Canadian Islamic speaker, registered Ontario marriage officiant, fundraiser, and technology entrepreneur. He studied Arabic & Islamic Studies at the University of Madinah while studying Quran & Chaplaincy at the College of Masjid Nabawi, and holds an MBA in Entrepreneurship. He performs Nikkah ceremonies across Ontario, delivers khutbahs, lectures, and workshops, and supports Muslim organizations through fundraising. He is also a co-founder of Zakah.com, the most detailed Zakah calculator and the Autoajr.com platform that has raised millions of dollars for non-profits.';
 
 const shortBio =
-  'Imam Zaniar Ahmad is a Canadian Islamic speaker and registered Ontario marriage officiant. He performs Nikah ceremonies and delivers practical lectures and workshops, and is a co-founder of Zakah.com, a detailed Zakah calculator and fundraising platform that has raised millions for non-profits.';
+  'Imam Zaniar Ahmad studied at the University of Madinah and studied Quran & Chaplaincy at the College of Masjid Nabawi. He is a registered Ontario marriage officiant and is the co-founder of Zakah.com, a best Zakah calculator and autoajr.com, a fundraising platform that has raised millions for non-profits.';
 
 const mediaPhotos = [
   {
