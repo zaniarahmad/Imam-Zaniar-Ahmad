@@ -140,7 +140,7 @@ export default function LocationPage({ params }) {
               <h2 id="venue-experience-title">Wedding Venues Served in This Region</h2>
             </div>
             <p className="section-lead">
-              Real ceremony settings from the region, paired with genuine Google feedback from couples Imam Zaniar has served.
+              Real ceremony settings from the region, paired with genuine Google feedback and Imam Zaniar&apos;s personal venue notes when available.
             </p>
           </div>
           <div className="venue-experience__grid">
@@ -169,6 +169,35 @@ export default function LocationPage({ params }) {
                   <span className="venue-experience__city">{venue.city}</span>
                   <h3>{venue.name}</h3>
                   <p className="venue-experience__caption">{venue.caption}</p>
+                  {venue.thoughts ? (
+                    <aside className="venue-experience__insight" aria-label={`Imam Zaniar's thoughts on ${venue.name}`}>
+                      <span className="venue-experience__insight-label">Imam Zaniar&apos;s Take</span>
+                      <p>{venue.thoughts}</p>
+                      {venue.pros?.length || venue.considerations?.length ? (
+                        <details className="venue-experience__insight-details">
+                          <summary>View Pros &amp; Considerations</summary>
+                          <div className="venue-experience__insight-grid">
+                            {venue.pros?.length ? (
+                              <div>
+                                <strong>What Worked Well</strong>
+                                <ul>
+                                  {venue.pros.map((item) => <li key={item}>{item}</li>)}
+                                </ul>
+                              </div>
+                            ) : null}
+                            {venue.considerations?.length ? (
+                              <div>
+                                <strong>Worth Considering</strong>
+                                <ul>
+                                  {venue.considerations.map((item) => <li key={item}>{item}</li>)}
+                                </ul>
+                              </div>
+                            ) : null}
+                          </div>
+                        </details>
+                      ) : null}
+                    </aside>
+                  ) : null}
                   <blockquote className="venue-experience__review">
                     <div className="venue-experience__stars" aria-label="5 out of 5 stars">★★★★★</div>
                     <p>&ldquo;{venue.review.quote}&rdquo;</p>
@@ -190,7 +219,7 @@ export default function LocationPage({ params }) {
             ))}
           </div>
           <p className="venue-experience__note">
-            Venue names identify past ceremony locations and do not imply sponsorship or endorsement. Reviews shown are from Imam Zaniar Ahmad&apos;s Google Business Profile.
+            Venue names identify past ceremony locations and do not imply sponsorship or endorsement. Venue notes are personal observations from the event attended and may not reflect every room, package, or current venue feature. Reviews shown are from Imam Zaniar Ahmad&apos;s Google Business Profile.
           </p>
         </section>
       ) : null}
