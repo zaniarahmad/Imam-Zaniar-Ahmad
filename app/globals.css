@@ -9693,12 +9693,12 @@ body {
 .hero-response-note {
   display: inline-grid;
   grid-template-columns: auto auto;
-  column-gap: 0.55rem;
+  column-gap: 0.45rem;
   row-gap: 0.28rem;
   width: max-content;
   max-width: 100%;
   margin-top: 1rem;
-  padding: 0.62rem 0.85rem;
+  padding: 0.62rem 0.65rem;
   border: 1px solid rgba(255, 253, 248, 0.2);
   border-radius: 999px;
   color: rgba(255, 253, 248, 0.78);
