@@ -11,8 +11,8 @@ export default function SiteBrand() {
       <Image
         className="brand__logo"
         src="/images/brand/imam-zaniar-horizontal-logo.png"
-        width={1803}
-        height={567}
+        width={2061}
+        height={685}
         alt="Imam Zaniar Ahmad"
         priority
       />
