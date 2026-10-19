@@ -1265,9 +1265,9 @@ li + li {
 }
 
 .brand__home-logo {
-  width: 9.6rem;
+  width: 8.2rem;
   height: auto;
-  margin-block: -0.7rem;
+  margin-block: 0;
   object-fit: contain;
 }
 
@@ -3086,7 +3086,7 @@ li + li {
   }
 
   .brand__home-logo {
-    width: 8.5rem;
+    width: 7.4rem;
   }
 
   .mobile-nav summary::-webkit-details-marker {
@@ -3307,8 +3307,7 @@ li + li {
   }
 
   .brand__home-logo {
-    width: 7.6rem;
-    margin-block: -0.55rem;
+    width: 6.8rem;
   }
 
   .brand__text strong {
