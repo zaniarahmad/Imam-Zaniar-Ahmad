@@ -1260,6 +1260,17 @@ li + li {
   flex: 0 0 auto;
 }
 
+.brand--homepage-logo {
+  align-self: stretch;
+}
+
+.brand__home-logo {
+  width: 9.6rem;
+  height: auto;
+  margin-block: -0.7rem;
+  object-fit: contain;
+}
+
 .brand__text {
   display: grid;
   line-height: 1.15;
@@ -3074,6 +3085,10 @@ li + li {
     list-style: none;
   }
 
+  .brand__home-logo {
+    width: 8.5rem;
+  }
+
   .mobile-nav summary::-webkit-details-marker {
     display: none;
   }
@@ -3289,6 +3304,11 @@ li + li {
   .brand__mark {
     width: 2.25rem;
     height: 2.25rem;
+  }
+
+  .brand__home-logo {
+    width: 7.6rem;
+    margin-block: -0.55rem;
   }
 
   .brand__text strong {

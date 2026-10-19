@@ -1,11 +1,11 @@
 import './globals.css';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import Script from 'next/script';
 import { Manrope } from 'next/font/google';
 import ActiveNavLink from './components/active-nav-link';
 import MobileNavigation from './components/mobile-navigation';
+import SiteBrand from './components/site-brand';
 import { siteContent, sitePathLinks } from '../lib/site-content';
 
 const manrope = Manrope({
@@ -124,18 +124,7 @@ gtag('config', ${JSON.stringify(ga4Id)}, { anonymize_ip: true });`}
         </a>
         <header className="site-header">
           <div className="site-header__inner">
-            <Link className="brand" href="/" aria-label="Imam Zaniar Ahmad home">
-              <Image
-                className="brand__mark"
-                src="/favicon.svg"
-                width={44}
-                height={44}
-                alt=""
-              />
-              <span className="brand__text">
-                <strong>Imam Zaniar Ahmad</strong>
-              </span>
-            </Link>
+            <SiteBrand />
 
             <nav className="site-nav site-nav--desktop" aria-label="Primary">
               <ul>
