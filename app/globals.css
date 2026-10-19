@@ -1260,12 +1260,12 @@ li + li {
   flex: 0 0 auto;
 }
 
-.brand--homepage-logo {
+.brand--logo {
   align-self: stretch;
 }
 
-.brand__home-logo {
-  width: 8.2rem;
+.brand__logo {
+  width: 10.75rem;
   height: auto;
   margin-block: 0;
   object-fit: contain;
@@ -3085,8 +3085,8 @@ li + li {
     list-style: none;
   }
 
-  .brand__home-logo {
-    width: 7.4rem;
+  .brand__logo {
+    width: 9.4rem;
   }
 
   .mobile-nav summary::-webkit-details-marker {
@@ -3306,8 +3306,8 @@ li + li {
     height: 2.25rem;
   }
 
-  .brand__home-logo {
-    width: 6.8rem;
+  .brand__logo {
+    width: 8.6rem;
   }
 
   .brand__text strong {
