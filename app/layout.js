@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { Manrope } from 'next/font/google';
 import ActiveNavLink from './components/active-nav-link';
+import ConversionTracking from './components/conversion-tracking';
 import MobileNavigation from './components/mobile-navigation';
 import SiteBrand from './components/site-brand';
 import { siteContent, sitePathLinks } from '../lib/site-content';
@@ -138,6 +139,7 @@ gtag('config', ${JSON.stringify(ga4Id)}, { anonymize_ip: true });`}
             </Script>
           </>
         ) : null}
+        <ConversionTracking />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}

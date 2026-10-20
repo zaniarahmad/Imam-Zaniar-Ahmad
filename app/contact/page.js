@@ -66,6 +66,7 @@ export default function ContactPage() {
               href={siteContent.contact.nikahBookingForm}
               target="_blank"
               rel="noopener noreferrer"
+              data-analytics-lead-type="nikah"
             >
               <Icon name="form" /> Book a Nikah
             </a>
@@ -74,14 +75,23 @@ export default function ContactPage() {
             <a
               className="contact-route__phone contact-route__phone--light"
               href={siteContent.contact.phoneHref}
+              data-analytics-lead-type="nikah"
             >
               {siteContent.contact.phoneDisplay}
             </a>
             <div className="content-actions">
-              <a className="button button--gold" href={siteContent.contact.phoneHref}>
+              <a
+                className="button button--gold"
+                href={siteContent.contact.phoneHref}
+                data-analytics-lead-type="nikah"
+              >
                 <Icon name="phone" /> Call
               </a>
-              <a className="button button--outline-light" href={siteContent.contact.smsHref}>
+              <a
+                className="button button--outline-light"
+                href={siteContent.contact.smsHref}
+                data-analytics-lead-type="nikah"
+              >
                 <Icon name="message" /> Text
               </a>
             </div>
@@ -100,14 +110,26 @@ export default function ContactPage() {
             appeals, and community events.
           </p>
           <div className="contact-route__footer contact-route__footer--lectures">
-            <a className="contact-route__phone" href={siteContent.contact.phoneHref}>
+            <a
+              className="contact-route__phone"
+              href={siteContent.contact.phoneHref}
+              data-analytics-lead-type="speaking"
+            >
               {siteContent.contact.phoneDisplay}
             </a>
             <div className="content-actions">
-              <a className="button button--primary" href={siteContent.contact.phoneHref}>
+              <a
+                className="button button--primary"
+                href={siteContent.contact.phoneHref}
+                data-analytics-lead-type="speaking"
+              >
                 <Icon name="phone" /> Call
               </a>
-              <a className="button button--ghost" href={siteContent.contact.smsHref}>
+              <a
+                className="button button--ghost"
+                href={siteContent.contact.smsHref}
+                data-analytics-lead-type="speaking"
+              >
                 <Icon name="message" /> Text
               </a>
             </div>

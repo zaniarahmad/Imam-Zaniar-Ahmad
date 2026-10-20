@@ -102,10 +102,18 @@ export default function WorkshopsPage() {
             marriage, or dua—designed around the needs and age group of your audience.
           </p>
           <div className="content-actions">
-            <a className="button button--primary" href={siteContent.contact.phoneHref}>
+            <a
+              className="button button--primary"
+              href={siteContent.contact.phoneHref}
+              data-analytics-lead-type="workshop"
+            >
               Call to Request a Workshop
             </a>
-            <a className="button button--ghost" href={siteContent.contact.smsHref}>
+            <a
+              className="button button--ghost"
+              href={siteContent.contact.smsHref}
+              data-analytics-lead-type="workshop"
+            >
               Send an SMS Text
             </a>
           </div>
@@ -165,7 +173,7 @@ export default function WorkshopsPage() {
                 <strong>Designed for</strong>
                 <span>{workshop.audiences}</span>
               </div>
-              <Link className="text-link" href="/contact">
+              <Link className="text-link" href="/contact?service=workshop">
                 Request this workshop <span aria-hidden="true">&rarr;</span>
               </Link>
             </article>
@@ -242,10 +250,18 @@ export default function WorkshopsPage() {
             audience, date, city, and preferred format.
           </p>
           <div className="content-actions">
-            <a className="button button--cream" href={siteContent.contact.phoneHref}>
+            <a
+              className="button button--cream"
+              href={siteContent.contact.phoneHref}
+              data-analytics-lead-type="workshop"
+            >
               Call {siteContent.contact.phoneDisplay}
             </a>
-            <a className="button button--outline-light" href={siteContent.contact.smsHref}>
+            <a
+              className="button button--outline-light"
+              href={siteContent.contact.smsHref}
+              data-analytics-lead-type="workshop"
+            >
               Send an SMS Text
             </a>
           </div>
