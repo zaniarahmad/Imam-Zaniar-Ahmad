@@ -53,9 +53,12 @@ export default function PrivacyPage() {
         <h2>Analytics</h2>
         <p>
           Google Analytics may collect usage information to help understand how
-          visitors find and use the website. It is not used to collect the
-          contents of Nikah booking requests, phone calls, SMS messages, or
-          Instagram conversations.
+          visitors find and use the website. Microsoft Clarity may collect
+          interaction information such as clicks, scrolling, device and browser
+          details, heatmaps, and masked session recordings to help improve the
+          website experience. These services are not used to collect the contents
+          of Nikah booking requests, phone calls, SMS messages, or Instagram
+          conversations.
         </p>
 
         <h2>Choose the Correct Contact Method</h2>
