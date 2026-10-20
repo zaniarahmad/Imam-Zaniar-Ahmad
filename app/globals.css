@@ -1244,7 +1244,7 @@ li + li {
   grid-template-columns: minmax(190px, 1fr) auto minmax(180px, 1fr);
   align-items: center;
   gap: 1.5rem;
-  min-height: 76px;
+  min-height: 68px;
 }
 
 .brand {
@@ -1265,7 +1265,7 @@ li + li {
 }
 
 .brand__logo {
-  width: 10.75rem;
+  width: 9.8rem;
   height: auto;
   margin-block: 0;
   object-fit: contain;
@@ -3086,7 +3086,7 @@ li + li {
   }
 
   .brand__logo {
-    width: 9.4rem;
+    width: 8.8rem;
   }
 
   .mobile-nav summary::-webkit-details-marker {
@@ -3298,7 +3298,7 @@ li + li {
 
 @media (max-width: 540px) {
   .site-header__inner {
-    min-height: 72px;
+    min-height: 64px;
   }
 
   .brand__mark {
@@ -3307,7 +3307,7 @@ li + li {
   }
 
   .brand__logo {
-    width: 8.6rem;
+    width: 8.25rem;
   }
 
   .brand__text strong {
