@@ -4707,6 +4707,22 @@ body {
   box-shadow: 0 22px 55px rgba(21, 56, 45, 0.1);
 }
 
+.service-path--link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.service-path--link:focus-visible {
+  outline: 3px solid var(--brass);
+  outline-offset: 4px;
+}
+
+.service-path--link:hover .text-link,
+.service-path--link:focus-visible .text-link {
+  color: var(--brass);
+}
+
 .mission-points li {
   display: flex;
   align-items: flex-start;

@@ -155,17 +155,22 @@ export default function Home() {
 
         <div className="service-path-grid">
           {nikahOptions.map((option) => (
-            <article className="service-path" key={option.title}>
+            <Link
+              className="service-path service-path--link"
+              href="/contact"
+              aria-label={option.cta}
+              key={option.title}
+            >
               <div className="card-icon-row">
                 <span className="card-icon"><Icon name={option.icon} /></span>
                 <span className="card-meta">{option.label}</span>
               </div>
               <h3>{option.title}</h3>
               <p>{option.description}</p>
-              <Link className="text-link" href="/contact">
+              <span className="text-link">
                 {option.cta} <span aria-hidden="true">&rarr;</span>
-              </Link>
-            </article>
+              </span>
+            </Link>
           ))}
         </div>
       </section>
