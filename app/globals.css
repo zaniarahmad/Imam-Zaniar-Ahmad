@@ -10459,6 +10459,41 @@ body {
   object-position: center;
 }
 
+.venue-experience__photo--placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  padding: 1.4rem;
+  background:
+    radial-gradient(circle at 78% 20%, rgba(197, 161, 90, 0.32), transparent 32%),
+    linear-gradient(145deg, #315c4a 0%, var(--forest) 62%, #102c23 100%);
+  color: var(--paper);
+}
+
+.venue-experience__photo--placeholder span {
+  color: var(--gold-light);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.venue-experience__photo--placeholder strong {
+  max-width: 15ch;
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  font-weight: 500;
+  line-height: 0.98;
+}
+
+.venue-experience__photo--placeholder small {
+  max-width: 32ch;
+  color: rgba(255, 253, 248, 0.68);
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
 .venue-experience__photo--pair {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -10495,6 +10530,14 @@ body {
   color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.55;
+}
+
+.venue-experience__address {
+  margin-top: 0.55rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-style: normal;
+  line-height: 1.45;
 }
 
 .venue-experience__insight {

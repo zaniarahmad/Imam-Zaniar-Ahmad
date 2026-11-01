@@ -147,28 +147,37 @@ export default function LocationPage({ params }) {
           <div className="venue-experience__grid">
             {location.venues.map((venue, venueIndex) => (
               <article className="venue-experience__card" key={venue.name}>
-                <figure className={`venue-experience__photo${venue.secondaryImage ? ' venue-experience__photo--pair' : ''}`}>
-                  <Image
-                    src={venue.image}
-                    alt={venue.alt}
-                    width={venue.imageWidth}
-                    height={venue.imageHeight}
-                    sizes={venue.secondaryImage ? '(max-width: 720px) 46vw, (max-width: 1100px) 23vw, 16vw' : '(max-width: 720px) 92vw, (max-width: 1100px) 46vw, 31vw'}
-                    priority={venueIndex === 0}
-                  />
-                  {venue.secondaryImage ? (
+                {venue.image ? (
+                  <figure className={`venue-experience__photo${venue.secondaryImage ? ' venue-experience__photo--pair' : ''}`}>
                     <Image
-                      src={venue.secondaryImage}
-                      alt={venue.secondaryImageAlt}
-                      width={venue.secondaryImageWidth}
-                      height={venue.secondaryImageHeight}
-                      sizes="(max-width: 720px) 46vw, (max-width: 1100px) 23vw, 16vw"
+                      src={venue.image}
+                      alt={venue.alt}
+                      width={venue.imageWidth}
+                      height={venue.imageHeight}
+                      sizes={venue.secondaryImage ? '(max-width: 720px) 46vw, (max-width: 1100px) 23vw, 16vw' : '(max-width: 720px) 92vw, (max-width: 1100px) 46vw, 31vw'}
+                      priority={venueIndex === 0}
                     />
-                  ) : null}
-                </figure>
+                    {venue.secondaryImage ? (
+                      <Image
+                        src={venue.secondaryImage}
+                        alt={venue.secondaryImageAlt}
+                        width={venue.secondaryImageWidth}
+                        height={venue.secondaryImageHeight}
+                        sizes="(max-width: 720px) 46vw, (max-width: 1100px) 23vw, 16vw"
+                      />
+                    ) : null}
+                  </figure>
+                ) : (
+                  <div className="venue-experience__photo venue-experience__photo--placeholder">
+                    <span>Newmarket, Ontario</span>
+                    <strong>{venue.name}</strong>
+                    {venue.address ? <small>{venue.address}</small> : null}
+                  </div>
+                )}
                 <div className="venue-experience__body">
                   <span className="venue-experience__city">{venue.city}</span>
                   <h3>{venue.name}</h3>
+                  {venue.address ? <address className="venue-experience__address">{venue.address}</address> : null}
                   <p className="venue-experience__caption">{venue.caption}</p>
                   {venue.thoughts ? (
                     <aside className="venue-experience__insight" aria-label={`Imam Zaniar's thoughts on ${venue.name}`}>
@@ -199,22 +208,26 @@ export default function LocationPage({ params }) {
                       ) : null}
                     </aside>
                   ) : null}
-                  <blockquote className="venue-experience__review">
-                    <div className="venue-experience__stars" aria-label="5 out of 5 stars">★★★★★</div>
-                    <ExpandableText>{`“${venue.review.quote}”`}</ExpandableText>
-                    <footer>
-                      <strong>{venue.review.name}</strong>
-                      <span>{venue.review.context}</span>
-                    </footer>
-                  </blockquote>
-                  <a
-                    className="text-link venue-experience__review-link"
-                    href={siteContent.reviews.googleBusinessProfileUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Google reviews <span aria-hidden="true">&rarr;</span>
-                  </a>
+                  {venue.review ? (
+                    <>
+                      <blockquote className="venue-experience__review">
+                        <div className="venue-experience__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <ExpandableText>{`“${venue.review.quote}”`}</ExpandableText>
+                        <footer>
+                          <strong>{venue.review.name}</strong>
+                          <span>{venue.review.context}</span>
+                        </footer>
+                      </blockquote>
+                      <a
+                        className="text-link venue-experience__review-link"
+                        href={siteContent.reviews.googleBusinessProfileUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View Google reviews <span aria-hidden="true">&rarr;</span>
+                      </a>
+                    </>
+                  ) : null}
                 </div>
               </article>
             ))}
