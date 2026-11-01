@@ -175,8 +175,20 @@ function RichArticle({ post }) {
           </div>
         </header>
 
-        <figure className="editorial-article__cover">
-          <Image src={post.coverImage} alt={post.coverAlt} width={post.coverWidth} height={post.coverHeight} priority sizes="(max-width: 820px) 94vw, 1180px" />
+        <figure className={`editorial-article__cover${post.secondaryCoverImage ? ' editorial-article__cover--pair' : ''}`}>
+          <div className="editorial-article__cover-media">
+            <Image src={post.coverImage} alt={post.coverAlt} width={post.coverWidth} height={post.coverHeight} priority sizes={post.secondaryCoverImage ? '(max-width: 820px) 47vw, 590px' : '(max-width: 820px) 94vw, 1180px'} />
+            {post.secondaryCoverImage ? (
+              <Image
+                src={post.secondaryCoverImage}
+                alt={post.secondaryCoverAlt}
+                width={post.secondaryCoverWidth}
+                height={post.secondaryCoverHeight}
+                priority
+                sizes="(max-width: 820px) 47vw, 590px"
+              />
+            ) : null}
+          </div>
           <figcaption>{post.coverCaption}</figcaption>
         </figure>
 
