@@ -2,7 +2,7 @@ import { siteContent } from '../lib/site-content';
 
 export default function sitemap() {
   const routes = [
-    { path: '/', lastModified: '2026-09-22' },
+    { path: '/', lastModified: '2026-11-02' },
     { path: '/about', lastModified: '2026-09-22' },
     { path: '/nikah', lastModified: '2026-10-10' },
     { path: '/locations', lastModified: '2026-09-24' },
@@ -11,7 +11,7 @@ export default function sitemap() {
     { path: '/testimonials', lastModified: '2026-09-22' },
     { path: '/projects', lastModified: '2026-07-27' },
     { path: '/media', lastModified: '2026-10-11' },
-    { path: '/blog', lastModified: '2026-09-22' },
+    { path: '/blog', lastModified: '2026-11-02' },
     { path: '/contact', lastModified: '2026-09-22' },
     { path: '/privacy', lastModified: '2026-07-27' },
     { path: '/accessibility', lastModified: '2026-07-27' },

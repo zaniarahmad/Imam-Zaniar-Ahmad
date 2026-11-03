@@ -8,7 +8,7 @@ import { notFound } from 'next/navigation';
 import ReadingProgress from '../../components/reading-progress';
 import Icon from '../../components/ui-icon';
 import { parseArticleMarkdown } from '../../../lib/blog-markdown';
-import { buildMetadata } from '../../../lib/metadata';
+import { buildBreadcrumbJsonLd, buildMetadata } from '../../../lib/metadata';
 import { siteContent } from '../../../lib/site-content';
 
 export function generateStaticParams() {
@@ -147,12 +147,18 @@ function RichArticle({ post }) {
       acceptedAnswer: { '@type': 'Answer', text: item.answer },
     })),
   };
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: 'Home', item: siteContent.siteUrl },
+    { name: 'Blog', item: `${siteContent.siteUrl}/blog` },
+    { name: post.title, item: articleUrl },
+  ]);
 
   return (
     <>
       <ReadingProgress />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       <article className="editorial-article">
         <header className="editorial-article__header">
@@ -225,6 +231,21 @@ function RichArticle({ post }) {
               <Link className="button button--primary" href="/nikah#guide-preview">Get the Free Guide</Link>
               <Link className="text-link" href="/contact">Book a Nikah <span aria-hidden="true">&rarr;</span></Link>
             </div>
+            {post.officialVenueLink || post.relatedLocationLink ? (
+              <div className="editorial-article__resources">
+                <span className="card-meta">Helpful links</span>
+                {post.officialVenueLink ? (
+                  <a href={post.officialVenueLink.href} target="_blank" rel="noreferrer">
+                    {post.officialVenueLink.label} <span aria-hidden="true">&nearr;</span>
+                  </a>
+                ) : null}
+                {post.relatedLocationLink ? (
+                  <Link href={post.relatedLocationLink.href}>
+                    {post.relatedLocationLink.label} <span aria-hidden="true">&rarr;</span>
+                  </Link>
+                ) : null}
+              </div>
+            ) : null}
           </aside>
         </div>
       </article>

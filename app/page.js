@@ -115,7 +115,7 @@ export default function Home() {
               priority
               fetchPriority="high"
               quality={68}
-              sizes="(max-width: 820px) 88vw, 34vw"
+              sizes="(max-width: 820px) 88vw, 30vw"
               className="hero-photo"
             />
             <div className="hero__caption">

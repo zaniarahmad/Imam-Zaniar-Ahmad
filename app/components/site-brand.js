@@ -15,6 +15,7 @@ export default function SiteBrand() {
         height={685}
         alt="Imam Zaniar Ahmad"
         priority
+        sizes="(max-width: 540px) 132px, (max-width: 1120px) 141px, 157px"
       />
     </Link>
   );
