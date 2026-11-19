@@ -53,7 +53,7 @@ export default function ContactPage() {
             Use the booking form for a religious Nikah (Katb Kitab), Ontario
             legal marriage officiation, or both services together.
           </p>
-          <div className="contact-route__footer">
+          <div className="contact-route__footer contact-route__footer--nikah">
             <div className="response-time-badge">
               <Icon name="clock" />
               <span>

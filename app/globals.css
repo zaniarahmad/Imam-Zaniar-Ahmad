@@ -10293,7 +10293,8 @@ body {
 
 .contact-route .card-meta {
   margin: 0;
-  justify-self: start;
+  justify-self: stretch;
+  text-align: center;
 }
 
 .contact-route h2 {
@@ -10339,6 +10340,21 @@ body {
 .contact-route__footer > .button {
   flex: 0 0 auto;
   padding-block: 0.78rem;
+}
+
+.contact-route__footer--nikah {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.contact-route__footer--nikah .response-time-badge {
+  min-width: 0;
+  gap: 0.45rem;
+  padding: 0.65rem;
+}
+
+.contact-route__footer--nikah > .button {
+  padding-inline: 0.85rem;
 }
 
 .contact-route__footer--lectures {
@@ -10927,6 +10943,11 @@ body {
   .contact-route__footer > .button {
     justify-content: center;
     width: 100%;
+  }
+
+  .contact-route__footer--nikah {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
   }
 
   .contact-route__footer--lectures .content-actions {
