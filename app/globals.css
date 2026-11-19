@@ -7455,6 +7455,32 @@ body {
   margin: 0 0 clamp(3rem, 7vw, 6.5rem);
 }
 
+.editorial-article__booking {
+  max-width: 770px;
+  margin: 1.4rem auto 0;
+  text-align: left;
+}
+
+.editorial-article__booking-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.editorial-article__booking p {
+  max-width: 650px;
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 520px) {
+  .editorial-article__booking-actions .button {
+    flex: 1 1 100%;
+  }
+}
+
 .editorial-article__cover-media {
   display: grid;
 }

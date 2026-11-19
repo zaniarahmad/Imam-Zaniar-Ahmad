@@ -183,6 +183,15 @@ function RichArticle({ post }) {
               <span><Icon name="clock" /> {post.readTime}</span>
             </div>
           </div>
+          {post.slug === 'planning-nikkah-isna-canada' ? (
+            <div className="editorial-article__booking">
+              <div className="editorial-article__booking-actions">
+                <Link className="button button--primary" href="/contact">Book Imam Zaniar</Link>
+                <a className="button button--gold" href="https://calendly.com/iccrental/nikkah-bookings">Book ISNA</a>
+              </div>
+              <p>These are separate bookings. Book Imam Zaniar for your ceremony and reserve your venue time directly with ISNA. Imam fees are not included in the venue rental.</p>
+            </div>
+          ) : null}
         </header>
 
         <figure className={`editorial-article__cover${post.secondaryCoverImage ? ' editorial-article__cover--pair' : ''}`}>
