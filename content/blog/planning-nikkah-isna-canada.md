@@ -8,6 +8,8 @@ Slug: planning-nikkah-isna-canada
 
 I have performed many nikkahs at ISNA Canada, and it is one of my favourite masjid settings in the GTA for a classy and beautiful Islamic ceremony. The natural light coming through the dome is great for photos, the updated carpet looks beautiful, the microphone system works well, and The Hub café gives guests somewhere to grab a drink or spend some time before or after the ceremony.
 
+Ready to reserve the venue? [Book your ISNA Canada nikkah time slot online](https://calendly.com/iccrental/nikkah-bookings). For booking questions, email [bookings@isnacanada.com](mailto:bookings@isnacanada.com) or call [905-403-8406, extension 703](tel:+19054038406;ext=703). Venue reservations and booking changes are handled directly by ISNA; arrange your imam separately.
+
 That being said, there are a few things I always recommend couples, families, and vendors know before the day.
 
 ## Your Start Time Is Important
@@ -97,6 +99,26 @@ Arrive early, have your guests come early, plan your photos realistically, brief
 *Always confirm current booking times, rules, capacity, décor requirements, and other venue policies directly with ISNA Canada, as these can change.*
 
 ## Frequently Asked Questions
+
+The booking-policy answers below summarize [ISNA Canada's official marriage and rental information](https://www.isnacanada.com/services/marriages/), checked November 19, 2026. Confirm current terms directly with ISNA before paying or changing a booking.
+
+**Does ISNA's hall rental include the imam's fees?**
+No. Hall rental excludes imam fees. Imams set their own fees and work as independent contractors.
+
+**What is ISNA Canada's nikkah cancellation policy?**
+ISNA lists a refund less a $100 administration fee for cancellation 30 days before the booking, 50% for 15–30 days, and none within 14 days. Email a clear cancellation request. Confirm the applicable refund directly, especially at the 30-day boundary.
+
+**Can we change our nikkah date?**
+Date changes require at least 15 days' notice and a $100 fee.
+
+**Who handles ISNA booking questions and cancellations?**
+Contact the ICC rentals team at [bookings@isnacanada.com](mailto:bookings@isnacanada.com) or [905-403-8406, extension 703](tel:+19054038406;ext=703). ISNA states a 48-hour response time.
+
+**Does decoration setup count toward our booking time?**
+Yes. Setup and takedown must fit within the one-hour slot. Guests should wait at the main entrance at the start time for staff guidance.
+
+**What should we prepare with our imam?**
+ISNA asks couples to coordinate the marriage licence paperwork and two pieces of ID with the imam beforehand, arrange the wali and two witnesses, and agree on mahr.
 
 **How early should guests arrive for an ISNA Canada nikkah?**
 I recommend telling guests to arrive 30 minutes before the actual booking time so the ceremony can begin promptly and the couple can make full use of the reserved hour.

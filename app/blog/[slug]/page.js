@@ -65,9 +65,13 @@ export function generateMetadata({ params }) {
 
 function renderInline(text) {
   return text
-    .split(/(\*\*[^*]+\*\*|\*[^*]+\*|imamzaniarahmad\.com)/g)
+    .split(/(\[[^\]]+\]\((?:https?:\/\/|mailto:|tel:)[^\s)]+\)|\*\*[^*]+\*\*|\*[^*]+\*|imamzaniarahmad\.com)/g)
     .filter(Boolean)
     .map((part, index) => {
+      const link = part.match(/^\[([^\]]+)\]\(((?:https?:\/\/|mailto:|tel:)[^\s)]+)\)$/);
+      if (link) {
+        return <a key={`${part}-${index}`} href={link[2]}>{link[1]}</a>;
+      }
       if (part.startsWith('**') && part.endsWith('**')) {
         return <strong key={`${part}-${index}`}>{part.slice(2, -2)}</strong>;
       }
