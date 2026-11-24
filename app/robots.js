@@ -6,6 +6,7 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
+        disallow: ['/admin/', '/api/', '/book-unsubscribe'],
       },
       ...[
         'Googlebot',
@@ -16,7 +17,7 @@ export default function robots() {
         'Claude-SearchBot',
         'Claude-User',
         'ClaudeBot',
-      ].map((userAgent) => ({ userAgent, allow: '/' })),
+      ].map((userAgent) => ({ userAgent, allow: '/', disallow: ['/admin/', '/api/', '/book-unsubscribe'] })),
     ],
     sitemap: `${siteContent.siteUrl}/sitemap.xml`,
     host: siteContent.siteUrl,

@@ -11,6 +11,7 @@ export default function sitemap() {
     { path: '/testimonials', lastModified: '2026-09-22' },
     { path: '/projects', lastModified: '2026-07-27' },
     { path: '/media', lastModified: '2026-10-11' },
+    { path: '/upcoming-book', lastModified: '2026-11-23' },
     { path: '/blog', lastModified: '2026-11-02' },
     { path: '/contact', lastModified: '2026-09-22' },
     { path: '/privacy', lastModified: '2026-07-27' },

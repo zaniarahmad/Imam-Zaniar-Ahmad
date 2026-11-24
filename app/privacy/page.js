@@ -21,6 +21,9 @@ export default function PrivacyPage() {
       </section>
 
       <section className="section prose">
+        <h2>Book Launch Updates</h2>
+        <p>When you select “Keep me updated” on the upcoming book page, your email address, signup date, website source and consent record are saved in a private shared list for Sheikh Alaa Elsayed and Imam Zaniar Ahmad. The list is stored using Neon and used for previews, launch updates and release information about Happily Ever After. It is separate from service-booking enquiries. Each book-update email should include an unsubscribe link. You may also request removal by contacting Imam Zaniar through the contact page.</p>
+        <p>The subscriber dashboard requires administrator sign-in. Subscriber addresses are not sent as analytics event parameters. Short-lived, hashed request identifiers are used to limit signup spam.</p>
         <h2>No Native Contact Form</h2>
         <p>
           This website does not collect booking details through its own contact

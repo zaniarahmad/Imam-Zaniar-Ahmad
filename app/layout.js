@@ -20,6 +20,7 @@ const primaryLinks = [
   { href: '/lectures', label: 'Lectures' },
   { href: '/workshops', label: 'Workshops' },
   { href: '/media', label: 'Press Kit' },
+  { href: '/upcoming-book', label: 'Upcoming Book' },
   { href: '/blog', label: 'Blog' },
 ];
 
