@@ -425,31 +425,30 @@ export default function NikahPage() {
       <section className="ceremony-gallery" aria-label="Nikah ceremony moments">
         <figure className="ceremony-gallery__feature">
           <Image
-            src={siteContent.photos.withGroom}
-            alt="Imam Zaniar Ahmad greeting a groom during an outdoor Nikah ceremony"
-            width={1206}
-            height={1494}
-            priority
+            src="/images/imam-zaniar/imam-zaniar-ahmad-bride-groom-nikah-ceremony.webp"
+            alt="Imam Zaniar Ahmad leading a Nikah ceremony with the bride and groom beneath stone arches"
+            width={1600}
+            height={1067}
             sizes="(max-width: 820px) 94vw, 58vw"
           />
           <figcaption>A warm, personal presence on an important day.</figcaption>
         </figure>
         <figure>
           <Image
-            src={siteContent.photos.signingNikah}
-            alt="Imam Zaniar Ahmad reviewing Nikah ceremony documents outdoors"
-            width={1365}
-            height={2048}
+            src="/images/imam-zaniar/imam-zaniar-ahmad-nikah-document-signing.webp"
+            alt="Imam Zaniar Ahmad holding a Nikah document while a ceremony participant signs it"
+            width={1600}
+            height={1067}
             sizes="(max-width: 820px) 94vw, 28vw"
           />
-          <figcaption>Clear preparation before the ceremony begins.</figcaption>
+          <figcaption>Guidance through the ceremony documents.</figcaption>
         </figure>
         <figure>
           <Image
-            src={siteContent.photos.weddingOfficiant}
-            alt="Imam Zaniar Ahmad holding ceremony documents at a Muslim wedding"
-            width={1206}
-            height={1478}
+            src="/images/imam-zaniar/imam-zaniar-ahmad-nikah-ceremony-stone-pavilion.webp"
+            alt="Imam Zaniar Ahmad addressing wedding guests during a Nikah ceremony in a stone pavilion"
+            width={1600}
+            height={1067}
             sizes="(max-width: 820px) 94vw, 28vw"
           />
           <figcaption>Religious guidance handled with dignity and care.</figcaption>
