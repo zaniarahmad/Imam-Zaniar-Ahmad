@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic';
 export async function POST(request) {
   try {
     const body = await request.json();
-    if (!equalSecret(body.code,process.env.BOOK_SETUP_CODE)) return Response.json({error:'Invalid setup code.'},{status:401});
+    if (!equalSecret(body.code,process.env.BOOK_SETUP_CODE)) { console.warn('Book setup unavailable or unauthorized', {configured:!!process.env.BOOK_SETUP_CODE,databaseConfigured:!!process.env.DATABASE_URL,authConfigured:!!process.env.BETTER_AUTH_SECRET}); return Response.json({error:'Invalid setup code.'},{status:401}); }
     const auth = getBookAuth();
     const {runMigrations}=await getMigrations(auth.options);
     await runMigrations(); await migrateBookTables();

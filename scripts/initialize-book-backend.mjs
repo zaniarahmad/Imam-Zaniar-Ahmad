@@ -5,7 +5,7 @@ process.stdout.write('Ready for private setup JSON on stdin.\n');
 let input='';
 process.stdin.on('data',async chunk=>{
   input+=chunk;
-  if(!input.includes('\n')) return;
+  if(!input.includes('\n')&&!input.includes('\r')) return;
   process.stdin.pause();
   try{
     const {origin,code}=JSON.parse(input.trim());
