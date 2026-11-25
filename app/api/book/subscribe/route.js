@@ -12,7 +12,10 @@ export async function POST(request) {
     const email = typeof input.email === 'string' ? input.email.trim().toLowerCase() : '';
     if (input.website || input.consent !== true || email.length>254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return reply(request,{error:'Please enter a valid email address.'},400);
     if (await limited(request)) return reply(request,{error:'Too many requests. Please try again in ten minutes.'},429);
-    await subscribeEmail(email,source);
+    const clean = value => typeof value === 'string' ? value.replace(/[\u0000-\u001f]/g, '').slice(0, 120) : '';
+    const attribution = { utm_source: clean(input.attribution?.utm_source), utm_medium: clean(input.attribution?.utm_medium), utm_campaign: clean(input.attribution?.utm_campaign) };
+    try { attribution.referrer = input.attribution?.referrer ? new URL(input.attribution.referrer).hostname.slice(0, 120) : ''; } catch { attribution.referrer = ''; }
+    await subscribeEmail(email,source,attribution);
     return reply(request,{ok:true});
   } catch { return reply(request,{error:'We couldn’t save your email. Please try again shortly.'},503); }
 }

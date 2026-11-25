@@ -12,7 +12,8 @@ export default function BookSignup() {
     const fields = new FormData(form);
     setState('saving'); setMessage('');
     try {
-      const response = await fetch('https://imam-zaniar-ahmad-eosin.vercel.app/api/book/subscribe', { method: 'POST', credentials: 'omit', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: fields.get('email'), consent: true, website: fields.get('website') }) });
+      const params = new URLSearchParams(window.location.search);
+      const response = await fetch('https://imam-zaniar-ahmad-eosin.vercel.app/api/book/subscribe', { method: 'POST', credentials: 'omit', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: fields.get('email'), consent: true, website: fields.get('website'), attribution: {utm_source:params.get('utm_source') || '',utm_medium:params.get('utm_medium') || '',utm_campaign:params.get('utm_campaign') || '',referrer:document.referrer} }) });
       const result = await response.json();
       if (!response.ok) throw new Error(result.error || 'Please try again in a moment.');
       setState('success'); setMessage('You’re on the list. We’ll keep you updated about the book.'); form.reset();
