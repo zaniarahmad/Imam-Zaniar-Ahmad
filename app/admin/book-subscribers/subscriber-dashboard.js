@@ -1,5 +1,6 @@
 'use client';
 import {useEffect,useState} from 'react';
+import Link from 'next/link';
 import styles from './subscriber-dashboard.module.css';
 const labels={imam_zaniar:'Imam Zaniar’s website',sheikh_alaa:'Sheikh Alaa’s website'};
 export default function SubscriberDashboard(){
@@ -16,5 +17,6 @@ export default function SubscriberDashboard(){
     <p className={styles.count}>{visible.length} shown · {rows.length} total · {rows.filter(r=>r.status==='subscribed').length} subscribed</p>
     <div className={styles.table}><table><thead><tr><th>Email</th><th>Signed up through</th><th>First signup</th><th>Status</th></tr></thead><tbody>{visible.map(r=><tr key={r.id}><td>{r.email}</td><td>{r.sources.map(s=><span className={styles.source} key={s}>{labels[s]}</span>)}</td><td>{new Date(r.created_at).toLocaleDateString('en-CA',{timeZone:'America/Toronto'})}</td><td>{r.status}</td></tr>)}</tbody></table>{visible.length===0?<p className={styles.empty}>No subscribers match this view.</p>:null}</div><p className={styles.note}>An email appearing on both websites remains one subscriber with both sources. CSV exports contain personal information and private unsubscribe links; keep them secure. The dashboard loads up to 10,000 subscribers.</p>
    </>:status==='loading'?<p role="status">Loading securely…</p>:<form onSubmit={signIn} className={styles.login}><h2>{setup?'Set up administrator access':'Sign in'}</h2><label>Email address<input name="email" type="email" required autoComplete="username" /></label><label>Password<input name="password" type="password" required minLength={setup?12:1} maxLength={128} autoComplete={setup?'new-password':'current-password'} /></label>{setup?<label>One-time setup code<input name="code" type="password" required autoComplete="off" /></label>:null}<button type="submit" className="button button--primary" disabled={status==='saving'}>{status==='saving'?'Please wait…':setup?'Create my administrator account':'Sign in'}</button><button type="button" className={styles.setupLink} onClick={()=>{setSetup(!setup);setMessage('');}}>{setup?'Back to sign in':'Initial administrator setup'}</button><p role="status">{message}</p></form>}
+ {!rows && <p><Link href="/admin/book-subscribers/reset">Reset my password</Link></p>}
  </section>;
 }
