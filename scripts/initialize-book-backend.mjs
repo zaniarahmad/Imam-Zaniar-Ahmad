@@ -9,7 +9,7 @@ process.stdin.on('data',async chunk=>{
   process.stdin.pause();
   try{
     const {origin,code}=JSON.parse(input.trim());
-    if(origin!=='https://www.imamzaniarahmad.com')throw Error('Unexpected website target');
+    if(!['https://www.imamzaniarahmad.com','https://imam-zaniar-ahmad-eosin.vercel.app'].includes(origin))throw Error('Unexpected website target');
     const response=await fetch(`${origin}/api/admin/book/setup`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code,migrateOnly:true})});
     console.log(JSON.stringify({status:response.status,ok:response.ok}));
     process.exit(response.ok?0:1);

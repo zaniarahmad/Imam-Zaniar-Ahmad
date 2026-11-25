@@ -427,6 +427,7 @@ export default function NikahPage() {
           <Image
             src="/images/imam-zaniar/imam-zaniar-ahmad-bride-groom-nikah-ceremony.webp"
             alt="Imam Zaniar Ahmad leading a Nikah ceremony with the bride and groom beneath stone arches"
+            style={{ objectPosition: '51% center' }}
             width={1600}
             height={1067}
             sizes="(max-width: 820px) 94vw, 58vw"
@@ -437,6 +438,7 @@ export default function NikahPage() {
           <Image
             src="/images/imam-zaniar/imam-zaniar-ahmad-nikah-document-signing.webp"
             alt="Imam Zaniar Ahmad holding a Nikah document while a ceremony participant signs it"
+            style={{ objectPosition: '72% center' }}
             width={1600}
             height={1067}
             sizes="(max-width: 820px) 94vw, 28vw"
@@ -447,6 +449,7 @@ export default function NikahPage() {
           <Image
             src="/images/imam-zaniar/imam-zaniar-ahmad-nikah-ceremony-stone-pavilion.webp"
             alt="Imam Zaniar Ahmad addressing wedding guests during a Nikah ceremony in a stone pavilion"
+            style={{ objectPosition: '91% center' }}
             width={1600}
             height={1067}
             sizes="(max-width: 820px) 94vw, 28vw"
